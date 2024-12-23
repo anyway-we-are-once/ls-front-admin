@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <title>기술교육아카데미 어드민 페이지</title>
+
+    <!-- Start CSS -->
+    <!-- BEGIN: Fonts CSS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    <!-- END: Fonts CSS-->
+
+    <!-- BEGIN: Vendor CSS-->
+    <link rel="stylesheet" type="text/css" href="./app-assets/vendors/css/vendors.min.css">
+    <link rel="stylesheet" type="text/css" href="./app-assets/vendors/css/charts/apexcharts.css">
+    <link rel="stylesheet" type="text/css" href="./app-assets/vendors/css/extensions/dragula.min.css">
+    <!-- END: Vendor CSS-->
+
+    <!-- BEGIN: Theme CSS-->
+    <link rel="stylesheet" type="text/css" href="./app-assets/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="./app-assets/css/bootstrap-extended.css">
+    <link rel="stylesheet" type="text/css" href="./app-assets/css/colors.css">
+    <link rel="stylesheet" type="text/css" href="./app-assets/css/components.css">
+    <link rel="stylesheet" type="text/css" href="./app-assets/css/themes/dark-layout.css">
+    <link rel="stylesheet" type="text/css" href="./app-assets/css/themes/semi-dark-layout.css">
+    <!-- END: Theme CSS-->
+
+    <!-- BEGIN: Page CSS-->
+    <link rel="stylesheet" type="text/css" href="./app-assets/css/core/menu/menu-types/vertical-menu.css">
+    <!-- END: Page CSS-->
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Gowun+Batang&family=Gowun+Dodum&family=Nanum+Myeongjo&display=swap');
+
+        *,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        .h1,
+        .h2,
+        .h3,
+        .h4,
+        .h5,
+        .h6 {
+            font-family: "Noto Sans KR", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .card {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    </style>
+
+</head>
+
+<body
+    class="vertical-layout vertical-menu-modern boxicon-layout no-card-shadow 1-column  navbar-sticky footer-static bg-full-screen-image blank-page blank-page"
+    data-open="click" data-menu="vertical-menu-modern" data-col="1-column">
+
+    <!-- BEGIN: Content-->
+    <div class="app-content content">
+        <div class="content-overlay"></div>
+        <div class="content-wrapper">
+            <div class="content-header row"></div>
+            <div class="content-body">
+                <section id="auth-login" class="row flexbox-container">
+                    <div class="col-xl-8 col-11" style="max-width: 1060px;">
+                        <div class=" bg-authentication mb-0">
+                            <div class="row m-0">
+                                <div class="col-md-12 col-12 px-0">
+                                    <div
+                                        class="card disable-rounded-right mb-0 p-5 h-100 d-flex justify-content-center">
+                                        <h1 class="logo_login m-auto"><a href="/"><img src="./static/images/logo.png"
+                                                    alt="기술교육아카데미 로고" style="width: 220px; aspect-ratio: auto;"></a>
+                                        </h1>
+
+                                        <!-- 비허용 IP가 접근하였을 경우 -->
+                                        <div class="card-header pb-0">
+                                            <div class="card-title d-flex align-items-center flex-column mt-2">
+                                                <h3 class="tit text-center mb-3"><b class="text-danger">허용되지 않은
+                                                        접근입니다.</b><br>관리자에게 문의하십시오.</h3>
+                                                <button type="submit" class="btn btn-dark inline">메인으로</button>
+                                            </div>
+                                        </div>
+
+                                        <!-- login -->
+                                        <div class="card-header pb-1">
+                                            <div class="card-title">
+                                                <h3 class="text-center mb-2">LS엠트론 기술교육아카데미
+                                                    관리자 로그인</h3>
+                                            </div>
+                                        </div>
+                                        <div class="card-content">
+                                            <div class="card-body">
+                                                <!-- <form action="index.html"> -->
+                                                <div class="form-group mb-50">
+                                                    <label class="text-bold-600" for="email_input">아이디 <span
+                                                            class="danger">*</span></label>
+                                                    <input type="email" class="form-control" id="email_input"
+                                                        placeholder="이메일(아이디)를 입력해 주세요.">
+                                                </div>
+                                                <div class="form-group mb-50">
+                                                    <label for="pw_input" class="text-bold-600" for="pw_input">비밀번호
+                                                        <span class="danger">*</span></label>
+                                                    <input type="password" class="form-control is-invalid" id="pw_input"
+                                                        placeholder="Invalid" value="Invalid" required>
+                                                    <div class="invalid-feedback">
+                                                        * 비밀번호가 일치하지 않습니다.
+                                                    </div>
+                                                </div>
+                                                <button
+                                                    class="btn btn-primary glow w-100 position-relative login_btn">로그인
+                                                </button>
+
+                                                <div
+                                                    class="form-group d-flex flex-md-row flex-column justify-content-between align-items-center">
+                                                    <div class="text-left"></div>
+                                                    <div class="text-right" style="margin-top: 1vw"><a
+                                                            href="reset_password.html" class="card-link">비밀번호 초기화</a>
+                                                    </div>
+                                                </div>
+
+                                                <div
+                                                    class="bg-secondary bg-light colors-container pr-1 pl-50 py-1 shadow">
+                                                    <div class="card-text">
+                                                        <ul>
+                                                            <li>비밀번호는 대소문자, 숫자, 특수문자 중 3가지를
+                                                                조합한 최소 8자리~20자리를 입력해 주세요.</li>
+                                                            <li>비밀번호 5회 오류시 계정 접속에 제한됩니다.
+                                                                최고 관리자에게 문의하시기 바랍니다.</li>
+                                                            <li>개인정보 보호 및 보안을 위해
+                                                                비밀번호는 180일 주기로 변경해 주세요.
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <!-- </form> -->
+                                            </div>
+                                        </div>
+
+                                        <!-- 로그인 2차 인증 -->
+                                        <div class="card-header pb-1">
+                                            <div class="card-title">
+                                                <h3 class="text-center mb-2">로그인 2차 인증</h3>
+                                                <p class="text-center font-medium-1">
+                                                    등록된 이메일(lsmtron@lsmtron.com)으로 인증번호가 발송되었습니다.
+                                                    <br>인증번호를 확인해 주세요.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="card-content">
+                                            <div class="card-body">
+                                                <form action="index.html">
+                                                    <div class="form-group mb-50 d-flex align-items-center">
+                                                        <label style="width: 70px;" class="text-bold-600"
+                                                            for="auth_num">인증번호 :</label>
+                                                        <input style="width: calc(100% - 70px)" type="email"
+                                                            class="form-control" id="auth_num"
+                                                            placeholder="인증번호를 입력해주세요.">
+
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <div class="text-right"><a href="javascript:void(0);"
+                                                                class="card-link resend_btn">인증번호 재발송</a>
+                                                        </div>
+                                                    </div>
+                                                    <button
+                                                        class="btn btn-primary glow w-100 position-relative submit_auth_num">확인<i
+                                                            id="icon-arrow" class="bx bx-right-arrow-alt"></i></button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <!-- END: Content-->
+
+    <!-- BEGIN: Vendor JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./app-assets/vendors/js/vendors.min.js"></script>
+    <script src="./app-assets/fonts/LivIconsEvo/js/LivIconsEvo.tools.js"></script>
+    <script src="./app-assets/fonts/LivIconsEvo/js/LivIconsEvo.defaults.js"></script>
+    <script src="./app-assets/fonts/LivIconsEvo/js/LivIconsEvo.min.js"></script>
+    <!-- BEGIN Vendor JS-->
+
+    <!-- BEGIN: Page JS-->
+    <script src="./app-assets/vendors/js/extensions/sweetalert2.all.min.js"></script>
+    <!-- END: Page JS-->
+
+    <!-- BEGIN: Theme JS-->
+    <script src="./app-assets/js/core/app-menu.js"></script>
+    <script src="./app-assets/js/core/app.js"></script>
+    <script src="./app-assets/js/scripts/components.js"></script>
+    <!-- END: Theme JS-->
+
+    <!-- BEGIN: Custom JS-->
+    <script>
+        // 인증번호 재발송 번호
+        $('.resend_btn').on('click', function () {
+            Swal.fire({ html: '인증번호가 재발송 되었습니다.' });
+        })
+
+        // 인증번호 확인 버튼
+        $('.submit_auth_num').on('click', function () {
+            Swal.fire({ html: '인증이 실패하였습니다. <br>인증번호를 확인해 주세요.' });
+        })
+
+        // 로그인 버튼
+        $('.login_btn').on('click', function () {
+            let validation = true;
+
+            // if(불일치 회원정보 모달창) {
+            Swal.fire({ text: '일치하는 회원정보가 없습니다.' });
+            validation = false;
+            // }
+
+            // else if(사용정지 모달창) {
+            Swal.fire({ html: '사용 정지된 회원입니다. <br> 관리자에게 문의하십시오.' });
+            validation = false;
+            // }
+
+            if (validation) {
+                // 로그인
+            }
+        });
+    </script>
+    <!-- END: Page JS-->
+</body>
+
+</html>

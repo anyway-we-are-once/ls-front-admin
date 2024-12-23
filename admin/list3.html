@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <title>기술교육아카데미 어드민 페이지</title>
+
+    <!-- Start CSS -->
+    <!-- BEGIN: Fonts CSS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    <!-- END: Fonts CSS-->
+
+    <!-- BEGIN: Vendor CSS-->
+    <link rel="stylesheet" type="text/css" href="/app-assets/vendors/css/vendors.min.css">
+    <link rel="stylesheet" type="text/css" href="/app-assets/vendors/css/charts/apexcharts.css">
+    <link rel="stylesheet" type="text/css" href="/app-assets/vendors/css/extensions/dragula.min.css">
+    <!-- END: Vendor CSS-->
+
+    <!-- BEGIN: Theme CSS-->
+    <link rel="stylesheet" type="text/css" href="/app-assets/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/app-assets/css/bootstrap-extended.css">
+    <link rel="stylesheet" type="text/css" href="/app-assets/css/colors.css">
+    <link rel="stylesheet" type="text/css" href="/app-assets/css/components.css">
+    <link rel="stylesheet" type="text/css" href="/app-assets/css/themes/dark-layout.css">
+    <link rel="stylesheet" type="text/css" href="/app-assets/css/themes/semi-dark-layout.css">
+    <!-- END: Theme CSS-->
+
+    <!-- BEGIN: Page CSS-->
+    <link rel="stylesheet" type="text/css" href="/app-assets/css/core/menu/menu-types/vertical-menu.css">
+    <!-- END: Page CSS-->
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Gowun+Batang&family=Gowun+Dodum&family=Nanum+Myeongjo&display=swap');
+
+        * {
+            font-family: "Noto Sans KR", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+        }
+    </style>
+
+</head>
+
+<body
+    class="vertical-layout vertical-menu-modern boxicon-layout no-card-shadow 2-columns  navbar-sticky footer-static  "
+    data-open="click" data-menu="vertical-menu-modern" data-col="2-columns">
+
+    <!-- BEGIN: Header-->
+    <div class="header-navbar-shadow"></div>
+    <nav class="header-navbar main-header-navbar navbar-expand-lg navbar navbar-with-menu fixed-top ">
+        <div class="navbar-wrapper">
+            <div class="navbar-container content">
+                <div class="navbar-collapse" id="navbar-mobile">
+                    <div class="mr-auto float-left bookmark-wrapper d-flex align-items-center w-100">
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item mobile-menu d-xl-none mr-auto"><a
+                                    class="nav-link nav-menu-main menu-toggle hidden-xs is-active" href="#"><i
+                                        class="ficon bx bx-menu"></i></a></li>
+                        </ul>
+
+                        <ul class="nav navbar-nav" style="margin-left: auto">
+                            <li class="nav-item d-flex align-items-center">
+                                <a class="nav-link d-flex align-items-center" href="#" data-toggle="dropdown">
+                                    <p class="mb-0 d-flex mr-1">
+                                        <i class="bx bx-user"></i>
+                                    </p>
+                                    <p class="mb-0">
+                                        <strong>
+                                            관리자
+                                        </strong>
+                                    </p>
+                                </a>
+                                <a class="ml-1" style="text-decoration: underline;" href="/myapge/"> 마이페이지 </a>
+                                <a class="ml-1" style="text-decoration: underline;" href="javascript:void(0);"> 로그아웃
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- END: Header-->
+
+
+    <!-- BEGIN: Main Menu-->
+    <div class="main-menu menu-fixed menu-light menu-accordion menu-shadow expanded" data-scroll-to-active="true"
+        style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+        <div class="navbar-header expanded">
+            <ul class="nav navbar-nav" style="flex-wrap: nowrap;">
+                <li class="nav-item mr-auto">
+                    <a class="navbar-brand" href="/index.html">
+                        <img class="logo w-100" src="/static/images/logo.png" />
+                    </a>
+                </li>
+                <li class="nav-item nav-toggle d-none d-lg-block d-xl-none"><a class="nav-link modern-nav-toggle pr-0"
+                        data-toggle="collapse">
+                        close
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="main-menu-content ps ps--active-y">
+            <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation"
+                data-icon-style="">
+                <li class="nav-item"><a href="#"><span class="menu-title" data-i18n="Menu Levels">교육 관리</span></a>
+                    <ul class="menu-content">
+                        <li>
+                            <a href="/edu/process.html">
+
+                                <span class="menu-item" data-i18n="Second Level">교육 과정 관리</span>
+                                <i class="bx bx-right-arrow-alt mr-0"></i>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="/edu/schedule.html">
+                                <span class="menu-item" data-i18n="Second Level">교육 일정 관리</span>
+                                <i class="bx bx-right-arrow-alt mr-0"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="#"><span class="menu-title" data-i18n="Menu Levels">회원 관리</span></a>
+                    <ul class="menu-content">
+                        <li>
+                            <a href="/member/regular.html">
+
+                                <span class="menu-item" data-i18n="Second Level">일반 회원</span>
+                                <i class="bx bx-right-arrow-alt mr-0"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/member/withdrawal.html">
+                                <span class="menu-item" data-i18n="Second Level">탈퇴 회원</span>
+                                <i class="bx bx-right-arrow-alt mr-0"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="#"><span class="menu-title" data-i18n="Menu Levels">컨소시엄 관리</span></a>
+                    <ul class="menu-content">
+                        <li>
+                            <a href="/consortium/status.html">
+                                <span class="menu-item" data-i18n="Second Level">신청 현황</span>
+                                <i class="bx bx-right-arrow-alt mr-0"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/consortium/corporate.html">
+                                <span class="menu-item" data-i18n="Second Level">협약 기업 관리</span>
+                                <i class="bx bx-right-arrow-alt mr-0"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="#"><span class="menu-title" data-i18n="Menu Levels">사이트 관리</span></a>
+                    <ul class="menu-content">
+                        <li>
+                            <a href="/site/popup.html">
+                                <span class="menu-item" data-i18n="Second Level">팝업 관리</span>
+                                <i class="bx bx-right-arrow-alt mr-0"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/site/main.html">
+                                <span class="menu-item" data-i18n="Second Level">메인 관리</span>
+                                <i class="bx bx-right-arrow-alt mr-0"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/site/history.html">
+                                <span class="menu-item" data-i18n="Second Level">연혁 관리</span>
+                                <i class="bx bx-right-arrow-alt mr-0"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/site/award.html">
+                                <span class="menu-item" data-i18n="Second Level">수상경력 관리</span>
+                                <i class="bx bx-right-arrow-alt mr-0"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/site/infra.html">
+                                <span class="menu-item" data-i18n="Second Level">훈련 인프라 관리</span>
+                                <i class="bx bx-right-arrow-alt mr-0"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="#"><span class="menu-title" data-i18n="Menu Levels">게시판 관리</span></a>
+                    <ul class="menu-content">
+                        <li>
+                            <a href="/board/inquiry.html">
+                                <span class="menu-item" data-i18n="Second Level">1:1 문의 관리</span>
+                                <i class="bx bx-right-arrow-alt mr-0"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/board/notice.html">
+                                <span class="menu-item" data-i18n="Second Level">공지사항</span>
+                                <i class="bx bx-right-arrow-alt mr-0"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/board/reference.html">
+                                <span class="menu-item" data-i18n="Second Level">자료실</span>
+                                <i class="bx bx-right-arrow-alt mr-0"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/board/faq.html">
+                                <span class="menu-item" data-i18n="Second Level">자주 묻는 질문</span>
+                                <i class="bx bx-right-arrow-alt mr-0"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="#"><span class="menu-title" data-i18n="Menu Levels">관리자 관리</span></a>
+                    <ul class="menu-content">
+                        <li>
+                            <a href="/admin/list.html">
+                                <span class="menu-item" data-i18n="Second Level">관리자 목록</span>
+                                <i class="bx bx-right-arrow-alt mr-0"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/admin/receipt.html">
+                                <span class="menu-item" data-i18n="Second Level">문의 수신 관리</span>
+                                <i class="bx bx-right-arrow-alt mr-0"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="#"><span class="menu-title" data-i18n="Menu Levels">보안 관리</span></a>
+                    <ul class="menu-content">
+                        <li>
+                            <a href="/security/">
+                                <span class="menu-item" data-i18n="Second Level">허용 IP 관리</span>
+                                <i class="bx bx-right-arrow-alt mr-0"></i>
+                            </a>
+                        </li>
+
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- END: Main Menu-->
+
+    <!-- BEGIN: Content-->
+    <!-- 07.관리자관리_수정  -->
+    <div class="app-content content">
+        <div class="content-overlay"></div>
+        <div class="content-wrapper">
+            <div class="content-header row">
+                <div class="content-header-left col-12 mb-2 mt-1">
+                    <div class="row breadcrumbs-top">
+                        <div class="col-12">
+                            <h3 class="content-header-title pr-1 mb-0 border-right-0">
+                                <strong>
+                                    관리자 관리
+                                </strong>
+                            </h3>
+                            <div class="breadcrumb-wrapper col-12">
+                                <ol class="breadcrumb p-0 mb-0 justify-content-end">
+                                    <li class="breadcrumb-item"><a href="index.html"><i class="bx bx-home-alt"></i></a>
+                                    </li>
+                                    <li class="breadcrumb-item"><a href="/admin/list.html">관리자 관리</a>
+                                    </li>
+                                    <li class="breadcrumb-item"><a href="/admin/list.html">관리자 관리</a>
+                                    </li>
+                                    <li class="breadcrumb-item"><a href="/admin/list3.html">수정</a>
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card background-color card w-100 b-1 mb-0">
+                            <div class="card-header mb-2">
+                                <h4 class="card-title">관리자 수정</h4>
+                            </div>
+                            <div class="card-body">
+
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="row pb-2 mb-2 border-bottom">
+                                            <div class="col-md-12 d-flex">
+                                                <div class="col-md-6">
+                                                    <div class="form-group row align-items-center mb-0  "
+                                                        style="width:100%;">
+                                                        <div class=" pr-0" style="width:20%">
+                                                            <label class="h6 mb-0">구분
+                                                            </label>
+                                                        </div>
+                                                        <div style="width:60%;">
+                                                            <ul class="list-unstyled mb-0 d-flex align-items-center">
+                                                                <li class="d-inline-block mr-2">
+                                                                    <fieldset>
+                                                                        <div class="radio">
+                                                                            <input type="radio" name="bsradio"
+                                                                                id="radio1" checked>
+                                                                            <label for="radio1">이용중</label>
+                                                                        </div>
+                                                                    </fieldset>
+                                                                </li>
+                                                                <li class="d-inline-block mr-2">
+                                                                    <fieldset>
+                                                                        <div class="radio">
+                                                                            <input type="radio" name="bsradio"
+                                                                                id="radio2">
+                                                                            <label for="radio2">이용정지</label>
+                                                                        </div>
+                                                                    </fieldset>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row pb-2 mb-2 border-bottom">
+                                            <div class="col-md-12 d-flex">
+                                                <div class="col-md-6">
+                                                    <div class="form-group row align-items-center mb-0  "
+                                                        style=" width:100%;">
+                                                        <div class=" pr-0" style="width:20%">
+                                                            <label class="h6 mb-0">담당자명
+                                                            </label>
+                                                        </div>
+                                                        <div style="width:60%;">
+                                                            <input type="text" id="input1" class="form-control"
+                                                                name="input1" value="담당자명을 입력해 주세요.">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="row pb-2 mb-2 border-bottom">
+                                            <div class="col-md-12 d-flex">
+                                                <div class="col-md-6">
+                                                    <div class="form-group row align-items-center mb-0  "
+                                                        style=" width:100%;">
+                                                        <div class=" pr-0" style="width:20%">
+                                                            <label class="h6 mb-0">소속
+                                                            </label>
+                                                        </div>
+                                                        <div style="width:60%;">
+                                                            <input type="text" id="input2" class="form-control"
+                                                                name="input2" value="부서를 입력해 주세요.">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row pb-2 mb-2 border-bottom">
+                                            <div class="col-md-12 d-flex">
+                                                <div class="col-md-6">
+                                                    <div class="form-group row align-items-center mb-0  "
+                                                        style=" width:100%;">
+                                                        <div class=" pr-0" style="width:20%">
+                                                            <label class="h6 mb-0">이메일
+                                                            </label>
+                                                        </div>
+                                                        <div style="width:60%;">
+                                                            <input type="text" id="input3" class="form-control"
+                                                                name="input3" disabled value="이메일을 입력해 주세요.">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row pb-2 mb-2 border-bottom">
+                                            <div class="col-md-12 d-flex">
+                                                <div class="col-md-6">
+                                                    <div class="form-group row align-items-center mb-0  "
+                                                        style=" width:100%;">
+                                                        <div class=" pr-0" style="width:20%">
+                                                            <label class="h6 mb-0">연락처
+                                                            </label>
+                                                        </div>
+                                                        <div style="width:60%;">
+                                                            <input type="text" id="input4" class="form-control"
+                                                                name="input4" value="연락처를 입력해 주세요.">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row pb-2 mb-2 border-bottom">
+                                            <div class="col-md-12 d-flex">
+                                                <div class="col-md-6">
+                                                    <div class="form-group row align-items-center mb-0  "
+                                                        style=" width:100%;">
+                                                        <div class=" pr-0" style="width:20%">
+                                                            <label class="h6 mb-0">비밀번호
+                                                            </label>
+                                                        </div>
+                                                        <div style="width:60%;">
+                                                            <button
+                                                                class="btn btn-dark text-uppercase w-150 search_button">
+                                                                임시비밀번호 발송
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="w-100 d-flex align-items-center justify-content-center mt-2">
+                                        <button type="button" class="btn btn-outline-danger ml-1 cancel_btn px-3">
+                                            <i class="bx bx-check d-block d-sm-none"></i>
+                                            <span class="d-none d-sm-block">삭제</span>
+                                        </button>
+                                        <button onClick="history.back();" type="button"
+                                            class="btn btn-outline-primary ml-1 cancel_btn px-3">
+                                            <i class="bx bx-check d-block d-sm-none"></i>
+                                            <span class="d-none d-sm-block">취소</span>
+                                        </button>
+                                        <button type="button" class="btn btn-primary ml-1 save_btn px-3">
+                                            <i class="bx bx-check d-block d-sm-none"></i>
+                                            <span class="d-none d-sm-block">저장</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END: Content-->
+
+
+    <!-- BEGIN: Vendor JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="/app-assets/vendors/js/vendors.min.js"></script>
+    <script src="/app-assets/fonts/LivIconsEvo/js/LivIconsEvo.tools.js"></script>
+    <script src="/app-assets/fonts/LivIconsEvo/js/LivIconsEvo.defaults.js"></script>
+    <script src="/app-assets/fonts/LivIconsEvo/js/LivIconsEvo.min.js"></script>
+    <!-- BEGIN Vendor JS-->
+
+    <!-- BEGIN: Page JS-->
+    <script src="/app-assets/vendors/js/extensions/sweetalert2.all.min.js"></script>
+    <!-- END: Page JS-->
+
+    <!-- BEGIN: Theme JS-->
+    <script src="/app-assets/js/core/app-menu.js"></script>
+    <script src="/app-assets/js/core/app.js"></script>
+    <script src="/app-assets/js/scripts/components.js"></script>
+    <script src="/app-assets/js/scripts/modal/components-modal.js"></script>
+
+    <!-- END: Theme JS-->
+
+</body>
+
+</html>

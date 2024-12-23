@@ -1,0 +1,1169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <title>기술교육아카데미 어드민 페이지</title>
+
+    <!-- Start CSS -->
+    <!-- BEGIN: Fonts CSS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    <!-- END: Fonts CSS-->
+
+    <!-- BEGIN: Vendor CSS-->
+    <link rel="stylesheet" type="text/css" href="/app-assets/vendors/css/vendors.min.css">
+    <link rel="stylesheet" type="text/css" href="/app-assets/vendors/css/charts/apexcharts.css">
+    <link rel="stylesheet" type="text/css" href="/app-assets/vendors/css/extensions/dragula.min.css">
+    <!-- END: Vendor CSS-->
+
+    <!-- BEGIN: Theme CSS-->
+    <link rel="stylesheet" type="text/css" href="/app-assets/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/app-assets/css/bootstrap-extended.css">
+    <link rel="stylesheet" type="text/css" href="/app-assets/css/colors.css">
+    <link rel="stylesheet" type="text/css" href="/app-assets/css/components.css">
+    <link rel="stylesheet" type="text/css" href="/app-assets/css/themes/dark-layout.css">
+    <link rel="stylesheet" type="text/css" href="/app-assets/css/themes/semi-dark-layout.css">
+    <!-- END: Theme CSS-->
+
+    <!-- BEGIN: Page CSS-->
+    <link rel="stylesheet" type="text/css" href="/app-assets/css/core/menu/menu-types/vertical-menu.css">
+    <!-- END: Page CSS-->
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Gowun+Batang&family=Gowun+Dodum&family=Nanum+Myeongjo&display=swap');
+
+        * {
+            font-family: "Noto Sans KR", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+        }
+    </style>
+
+</head>
+
+<body
+    class="vertical-layout vertical-menu-modern boxicon-layout no-card-shadow 2-columns  navbar-sticky footer-static  "
+    data-open="click" data-menu="vertical-menu-modern" data-col="2-columns">
+
+    <!-- BEGIN: Header-->
+    <div class="header-navbar-shadow"></div>
+    <nav class="header-navbar main-header-navbar navbar-expand-lg navbar navbar-with-menu fixed-top ">
+        <div class="navbar-wrapper">
+            <div class="navbar-container content">
+                <div class="navbar-collapse" id="navbar-mobile">
+                    <div class="mr-auto float-left bookmark-wrapper d-flex align-items-center w-100">
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item mobile-menu d-xl-none mr-auto"><a
+                                    class="nav-link nav-menu-main menu-toggle hidden-xs is-active" href="#"><i
+                                        class="ficon bx bx-menu"></i></a></li>
+                        </ul>
+
+                        <ul class="nav navbar-nav" style="margin-left: auto">
+                            <li class="nav-item d-flex align-items-center">
+                                <a class="nav-link d-flex align-items-center" href="#" data-toggle="dropdown">
+                                    <p class="mb-0 d-flex mr-1">
+                                        <i class="bx bx-user"></i>
+                                    </p>
+                                    <p class="mb-0">
+                                        <strong>
+                                            관리자
+                                        </strong>
+                                    </p>
+                                </a>
+                                <a class="ml-1" style="text-decoration: underline;" href="/myapge/"> 마이페이지 </a>
+                                <a class="ml-1" style="text-decoration: underline;" href="javascript:void(0);"> 로그아웃
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- END: Header-->
+
+
+    <!-- BEGIN: Main Menu-->
+    <div class="main-menu menu-fixed menu-light menu-accordion menu-shadow expanded" data-scroll-to-active="true"
+        style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+        <div class="navbar-header expanded">
+            <ul class="nav navbar-nav" style="flex-wrap: nowrap;">
+                <li class="nav-item mr-auto">
+                    <a class="navbar-brand" href="/index.html">
+                        <img class="logo w-100" src="/static/images/logo.png" />
+                    </a>
+                </li>
+                <li class="nav-item nav-toggle d-none d-lg-block d-xl-none"><a class="nav-link modern-nav-toggle pr-0"
+                        data-toggle="collapse">
+                        close
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="main-menu-content ps ps--active-y">
+            <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation"
+                data-icon-style="">
+                <li class="nav-item"><a href="#"><span class="menu-title" data-i18n="Menu Levels">교육 관리</span></a>
+                    <ul class="menu-content">
+                        <li>
+                            <a href="/edu/process.html">
+
+                                <span class="menu-item" data-i18n="Second Level">교육 과정 관리</span>
+                                <i class="bx bx-right-arrow-alt mr-0"></i>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="/edu/schedule.html">
+                                <span class="menu-item" data-i18n="Second Level">교육 일정 관리</span>
+                                <i class="bx bx-right-arrow-alt mr-0"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="#"><span class="menu-title" data-i18n="Menu Levels">회원 관리</span></a>
+                    <ul class="menu-content">
+                        <li>
+                            <a href="/member/regular.html">
+
+                                <span class="menu-item" data-i18n="Second Level">일반 회원</span>
+                                <i class="bx bx-right-arrow-alt mr-0"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/member/withdrawal.html">
+                                <span class="menu-item" data-i18n="Second Level">탈퇴 회원</span>
+                                <i class="bx bx-right-arrow-alt mr-0"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="#"><span class="menu-title" data-i18n="Menu Levels">컨소시엄 관리</span></a>
+                    <ul class="menu-content">
+                        <li>
+                            <a href="/consortium/status.html">
+                                <span class="menu-item" data-i18n="Second Level">신청 현황</span>
+                                <i class="bx bx-right-arrow-alt mr-0"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/consortium/corporate.html">
+                                <span class="menu-item" data-i18n="Second Level">협약 기업 관리</span>
+                                <i class="bx bx-right-arrow-alt mr-0"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="#"><span class="menu-title" data-i18n="Menu Levels">사이트 관리</span></a>
+                    <ul class="menu-content">
+                        <li>
+                            <a href="/site/popup.html">
+                                <span class="menu-item" data-i18n="Second Level">팝업 관리</span>
+                                <i class="bx bx-right-arrow-alt mr-0"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/site/main.html">
+                                <span class="menu-item" data-i18n="Second Level">메인 관리</span>
+                                <i class="bx bx-right-arrow-alt mr-0"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/site/history.html">
+                                <span class="menu-item" data-i18n="Second Level">연혁 관리</span>
+                                <i class="bx bx-right-arrow-alt mr-0"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/site/award.html">
+                                <span class="menu-item" data-i18n="Second Level">수상경력 관리</span>
+                                <i class="bx bx-right-arrow-alt mr-0"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/site/infra.html">
+                                <span class="menu-item" data-i18n="Second Level">훈련 인프라 관리</span>
+                                <i class="bx bx-right-arrow-alt mr-0"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="#"><span class="menu-title" data-i18n="Menu Levels">게시판 관리</span></a>
+                    <ul class="menu-content">
+                        <li>
+                            <a href="/board/inquiry.html">
+                                <span class="menu-item" data-i18n="Second Level">1:1 문의 관리</span>
+                                <i class="bx bx-right-arrow-alt mr-0"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/board/notice.html">
+                                <span class="menu-item" data-i18n="Second Level">공지사항</span>
+                                <i class="bx bx-right-arrow-alt mr-0"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/board/reference.html">
+                                <span class="menu-item" data-i18n="Second Level">자료실</span>
+                                <i class="bx bx-right-arrow-alt mr-0"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/board/faq.html">
+                                <span class="menu-item" data-i18n="Second Level">자주 묻는 질문</span>
+                                <i class="bx bx-right-arrow-alt mr-0"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="#"><span class="menu-title" data-i18n="Menu Levels">관리자 관리</span></a>
+                    <ul class="menu-content">
+                        <li>
+                            <a href="/admin/list.html">
+                                <span class="menu-item" data-i18n="Second Level">관리자 목록</span>
+                                <i class="bx bx-right-arrow-alt mr-0"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/admin/receipt.html">
+                                <span class="menu-item" data-i18n="Second Level">문의 수신 관리</span>
+                                <i class="bx bx-right-arrow-alt mr-0"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="#"><span class="menu-title" data-i18n="Menu Levels">보안 관리</span></a>
+                    <ul class="menu-content">
+                        <li>
+                            <a href="/security/">
+                                <span class="menu-item" data-i18n="Second Level">허용 IP 관리</span>
+                                <i class="bx bx-right-arrow-alt mr-0"></i>
+                            </a>
+                        </li>
+
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- END: Main Menu-->
+
+    <!-- BEGIN: Content-->
+    <!-- 02.교육관리_교육과정관리_목록  -->
+    <div class="app-content content">
+        <div class="content-overlay"></div>
+        <div class="content-wrapper">
+            <div class="content-header row">
+                <div class="content-header-left col-12 mb-2 mt-1">
+                    <div class="row breadcrumbs-top">
+                        <div class="col-12">
+                            <h3 class="content-header-title pr-1 mb-0 border-right-0">
+                                <strong>
+                                    교육 과정 관리
+                                </strong>
+                            </h3>
+                            <div class="breadcrumb-wrapper col-12">
+                                <ol class="breadcrumb p-0 mb-0 justify-content-end">
+                                    <li class="breadcrumb-item"><a href="index.html"><i class="bx bx-home-alt"></i></a>
+                                    </li>
+                                    <li class="breadcrumb-item"><a href="/edu/process.html">교육 관리</a>
+                                    </li>
+                                    <li class="breadcrumb-item"><a href="/edu/process.html">교육과정 관리</a>
+                                    </li>
+                                    <li class="breadcrumb-item"><a href="/edu/process2.html">수정</a>
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content-body">
+                <!-- Section start -->
+                <section id="mypage">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card background-color card w-100 b-1 mb-0">
+                                <div class="card-header mb-2">
+                                    <h4 class="card-title">교육 과정 등록&수정</h4>
+                                </div>
+                                <div class="card-body">
+                                    <ul class="nav user-profile-nav justify-content-center  justify-content-md-start nav-tabs border-bottom-0"
+                                        role="tablist">
+                                        <li class="nav-item pb-0">
+                                            <a class=" nav-link d-flex px-1 active" id="tab1-tab" data-toggle="tab"
+                                                href="#tab1" aria-controls="tab1" role="tab" aria-selected="true"><span
+                                                    class="d-none d-md-block">과정 기본
+                                                    정보</span></a>
+                                        </li>
+                                        <li class="nav-item pb-0">
+                                            <a class="nav-link d-flex px-1" id="tab2-tab" data-toggle="tab" href="#tab2"
+                                                aria-controls="tab2" role="tab" aria-selected="false"><span
+                                                    class="d-none d-md-block">과정 상세
+                                                    정보</span></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="card-body">
+                                    <!-- TAB -->
+                                    <div class="tab-content">
+                                        <div class="tab-pane active" id="tab1" aria-labelledby="tab1-tab"
+                                            role="tabpanel">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="row pb-2 mb-2 border-bottom">
+                                                        <div class="col-md-12 d-flex">
+                                                            <div class="col-md-6">
+                                                                <div class="form-group row align-items-center mb-0"
+                                                                    style="
+                                            width:100%;">
+                                                                    <div class=" pr-0" style="width:20%">
+                                                                        <label class="h6 mb-0">등록일</label>
+                                                                    </div>
+                                                                    <div style="width:60%;">
+                                                                        <input type="text" id="input1"
+                                                                            class="form-control" name="input1" readonly
+                                                                            value="2024-10-30 23:00">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <div class="form-group row align-items-center mb-0  "
+                                                                    style="
+                                            width:100%;">
+                                                                    <div class=" pr-0" style="width:20%">
+                                                                        <label class="h6 mb-0">마지막
+                                                                            수정일</label>
+                                                                    </div>
+                                                                    <div style="width:60%;">
+                                                                        <input type="text" id="input2"
+                                                                            class="form-control" name="input2" readonly
+                                                                            value="2024-10-30 23:00">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row pb-2 mb-2 border-bottom">
+                                                        <div class="col-md-12 d-flex">
+                                                            <div class="col-md-6">
+                                                                <div class="form-group row align-items-center mb-0  "
+                                                                    style="
+                                            width:100%;">
+                                                                    <div class=" pr-0" style="width:20%">
+                                                                        <label class="h6 mb-0">구분 <strong
+                                                                                class="text-danger">[필수]</strong>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div style="width:60%;">
+                                                                        <ul class="list-unstyled mb-0 d-flex align-items-center
+                                                ">
+                                                                            <li class="d-inline-block mr-2">
+                                                                                <fieldset>
+                                                                                    <div class="radio">
+                                                                                        <input type="radio"
+                                                                                            name="bsradio" id="radio1"
+                                                                                            checked>
+                                                                                        <label for="radio1">사용</label>
+                                                                                    </div>
+                                                                                </fieldset>
+                                                                            </li>
+                                                                            <li class="d-inline-block mr-2">
+                                                                                <fieldset>
+                                                                                    <div class="radio">
+                                                                                        <input type="radio"
+                                                                                            name="bsradio" id="radio2">
+                                                                                        <label for="radio2">미사용</label>
+                                                                                    </div>
+                                                                                </fieldset>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row pb-2 mb-2 border-bottom">
+                                                        <div class="col-md-12 d-flex">
+                                                            <div class="col-md-6">
+                                                                <div class="form-group row align-items-center mb-0  "
+                                                                    style="
+                                            width:100%;">
+                                                                    <div class=" pr-0" style="width:20%">
+                                                                        <label class="h6 mb-0">교육분류 <strong
+                                                                                class="text-danger">[필수]</strong>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div style="width:60%;">
+                                                                        <ul class="list-unstyled mb-0 d-flex align-items-center
+                                                ">
+                                                                            <li class="d-inline-block mr-2">
+                                                                                <fieldset>
+                                                                                    <div class="radio">
+                                                                                        <input type="radio"
+                                                                                            name="bsradio2"
+                                                                                            id="radio2_1" checked>
+                                                                                        <label for="radio2_1">사출</label>
+                                                                                    </div>
+                                                                                </fieldset>
+                                                                            </li>
+                                                                            <li class="d-inline-block mr-2">
+                                                                                <fieldset>
+                                                                                    <div class="radio">
+                                                                                        <input type="radio"
+                                                                                            name="bsradio2"
+                                                                                            id="radio2_2">
+                                                                                        <label
+                                                                                            for="radio2_2">농업기계</label>
+                                                                                    </div>
+                                                                                </fieldset>
+                                                                            </li>
+                                                                            <li class="d-inline-block mr-2">
+                                                                                <fieldset>
+                                                                                    <div class="radio">
+                                                                                        <input type="radio"
+                                                                                            name="bsradio2"
+                                                                                            id="radio2_3">
+                                                                                        <label
+                                                                                            for="radio2_3">품질교육</label>
+                                                                                    </div>
+                                                                                </fieldset>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <div class="form-group row align-items-center mb-0  "
+                                                                    style="
+                                            width:100%;">
+                                                                    <div class=" pr-0" style="width:20%">
+                                                                        <label class="h6 mb-0">교육생 평가여부
+                                                                        </label>
+                                                                    </div>
+                                                                    <div style="width:60%;">
+                                                                        <ul
+                                                                            class="list-unstyled mb-0  d-flex align-items-center">
+                                                                            <li class="d-inline-block mr-2">
+                                                                                <fieldset>
+                                                                                    <div class="checkbox">
+                                                                                        <input type="checkbox"
+                                                                                            class="checkbox-input"
+                                                                                            id="checkbox1" checked>
+                                                                                        <label
+                                                                                            for="checkbox1">사용함</label>
+                                                                                    </div>
+                                                                                </fieldset>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row pb-2 mb-2 border-bottom">
+                                                        <div class="col-md-12 d-flex">
+                                                            <div class="col-md-6">
+                                                                <div class="form-group row align-items-center mb-0 "
+                                                                    style="width:100%;">
+                                                                    <div class=" pr-0" style="width:20%">
+                                                                        <label class="h6 mb-0">과정분류 <strong
+                                                                                class="text-danger">[필수]</strong>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="d-flex" style="width:80%;">
+                                                                        <fieldset class="form-group mb-0 col-md-4 p-0">
+                                                                            <select class="form-control"
+                                                                                id="search_category">
+                                                                                <option>초급</option>
+                                                                                <option>중급</option>
+                                                                                <option>고급</option>
+                                                                            </select>
+                                                                        </fieldset>
+
+                                                                        <fieldset
+                                                                            class="form-group mb-0 col-md-4 p-0 ml-1">
+                                                                            <select class="form-control"
+                                                                                id="search_category">
+                                                                                <option>사출성형</option>
+                                                                                <option>사출금형</option>
+                                                                                <option>유지보수 외</option>
+                                                                            </select>
+                                                                        </fieldset>
+
+                                                                        <a href="javascript:void(0);"
+                                                                            class="btn btn-dark text-uppercase width-150 ml-1 search_button">
+                                                                            과정 분류 관리
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row pb-2 mb-2 border-bottom">
+                                                        <div class="col-md-12 d-flex align-items-center ">
+                                                            <div class="col-md-6">
+                                                                <div class="form-group row align-items-center mb-0"
+                                                                    style="
+                                        width:100%;">
+                                                                    <div class=" pr-0" style="width:20%">
+                                                                        <label class="h6 mb-0">과정명 <strong
+                                                                                class="text-danger">[필수]</strong></label>
+                                                                    </div>
+                                                                    <div class="d-flex" style="width:80%;">
+                                                                        <input type="text" id="input2"
+                                                                            class="form-control" name="input2"
+                                                                            placeholder="내용을 입력해 주세요">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <ul class="list-unstyled mb-0  d-flex align-items-center">
+                                                                <li class="d-inline-block mr-2">
+                                                                    <fieldset>
+                                                                        <div class="checkbox">
+                                                                            <input type="checkbox"
+                                                                                class="checkbox-input" id="checkbox2"
+                                                                                checked="">
+                                                                            <label for="checkbox2">신규
+                                                                                배지
+                                                                                노출</label>
+                                                                        </div>
+                                                                    </fieldset>
+                                                                </li>
+                                                            </ul>
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="row pb-2 mb-2 border-bottom">
+                                                        <div class="col-md-12 d-flex align-items-center ">
+                                                            <div class="col-md-6">
+                                                                <div class="form-group row align-items-center mb-0"
+                                                                    style="
+                                        width:100%;">
+                                                                    <div class=" pr-0" style="width:20%">
+                                                                        <label class="h6 mb-0">썸네일 <strong
+                                                                                class="text-danger">[필수]</strong></label>
+                                                                    </div>
+
+                                                                    <div style="width:80%">
+                                                                        <fieldset class="form-group mb-0">
+
+                                                                            <div class="custom-file">
+                                                                                <input type="file"
+                                                                                    class="custom-file-input"
+                                                                                    id="inputGroupFile01">
+                                                                                <label class="custom-file-label"
+                                                                                    for="inputGroupFile01">IMG.jpg</label>
+                                                                            </div>
+
+                                                                            <label for="basicInputFile">* 권장사이즈:
+                                                                                NXN (px), JPG/PNG/GIF 등록
+                                                                                가능</label>
+                                                                        </fieldset>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row pb-2 mb-2 border-bottom">
+                                                        <div class="col-md-12 d-flex align-items-center ">
+                                                            <div class="col-md-6">
+                                                                <div class="form-group row align-items-center mb-0"
+                                                                    style="
+                                        width:100%;">
+                                                                    <div class=" pr-0" style="width:20%">
+                                                                        <label class="h6 mb-0">상세 이미지 <strong
+                                                                                class="text-danger">[필수]</strong></label>
+                                                                    </div>
+
+                                                                    <div style="width:80%">
+                                                                        <fieldset class="form-group mb-0">
+
+                                                                            <div class="custom-file">
+                                                                                <input type="file"
+                                                                                    class="custom-file-input"
+                                                                                    id="inputGroupFile01">
+                                                                                <label class="custom-file-label"
+                                                                                    for="inputGroupFile01">IMG.jpg</label>
+                                                                            </div>
+
+                                                                            <label for="basicInputFile">* 권장사이즈:
+                                                                                NXN (px), JPG/PNG/GIF 등록
+                                                                                가능</label>
+                                                                        </fieldset>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row pb-2 mb-2 border-bottom">
+                                                        <div class="col-md-12 d-flex align-items-center ">
+                                                            <div class="col-md-6">
+                                                                <div class="form-group row align-items-center mb-0"
+                                                                    style="
+                                        width:100%;">
+                                                                    <div class=" pr-0" style="width:20%">
+                                                                        <label class="h6 mb-0">교육시간 <strong
+                                                                                class="text-danger">[필수]</strong></label>
+                                                                    </div>
+                                                                    <div class="d-flex" style="width:80%;">
+                                                                        <input type="text" id="input3"
+                                                                            class="form-control" name="input3"
+                                                                            placeholder="내용을 입력해 주세요">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row pb-2 mb-2 border-bottom">
+                                                        <div class="col-md-12 d-flex align-items-center ">
+                                                            <div class="col-md-6">
+                                                                <div class="form-group row align-items-center mb-0"
+                                                                    style="
+                                        width:100%;">
+                                                                    <div class=" pr-0" style="width:20%">
+                                                                        <label class="h6 mb-0">교육비용(협약)</label>
+                                                                    </div>
+                                                                    <div class="d-flex" style="width:80%;">
+                                                                        <input type="text" id="input4"
+                                                                            class="form-control" name="input4"
+                                                                            placeholder="내용을 입력해 주세요">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <div class="form-group row align-items-center mb-0"
+                                                                    style="
+                                        width:100%;">
+                                                                    <div class=" pr-0" style="width:20%">
+                                                                        <label class="h6 mb-0">교육비용(비협약)</label>
+                                                                    </div>
+                                                                    <div class="d-flex" style="width:80%;">
+                                                                        <input type="text" id="input5"
+                                                                            class="form-control" name="input5"
+                                                                            placeholder="내용을 입력해 주세요">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row pb-2 mb-2 border-bottom">
+                                                        <div class="col-md-12 d-flex align-items-center ">
+                                                            <div class="col-md-6">
+                                                                <div class="form-group row align-items-center mb-0"
+                                                                    style="
+                                        width:100%;">
+                                                                    <div class=" pr-0" style="width:20%">
+                                                                        <label class="h6 mb-0">교육문의 접수 <strong
+                                                                                class="text-danger">[필수]</strong></label>
+                                                                    </div>
+                                                                    <div class="d-flex" style="width:80%;">
+                                                                        <input type="text" id="input5"
+                                                                            class="form-control" name="input5"
+                                                                            placeholder="내용을 입력해 주세요">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <div class="form-group row align-items-center mb-0"
+                                                                    style="
+                                        width:100%;">
+                                                                    <div class=" pr-0" style="width:20%">
+                                                                        <label class="h6 mb-0">교육장소 <strong
+                                                                                class="text-danger">[필수]</strong></label>
+                                                                    </div>
+                                                                    <div class="d-flex" style="width:80%;">
+                                                                        <input type="text" id="input6"
+                                                                            class="form-control" name="input6"
+                                                                            placeholder="내용을 입력해 주세요">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row pb-2 mb-2 border-bottom">
+                                                        <div class="col-md-12 d-flex align-items-center ">
+                                                            <div class="col-md-6">
+                                                                <div class="form-group row align-items-center mb-0"
+                                                                    style="
+                                        width:100%;">
+                                                                    <div class=" pr-0" style="width:20%">
+                                                                        <label class="h6 mb-0">기타</label>
+                                                                    </div>
+                                                                    <div class="d-flex" style="width:80%;">
+                                                                        <input type="text" id="input7"
+                                                                            class="form-control" name="input7"
+                                                                            placeholder="내용을 입력해 주세요">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row pb-2 mb-2 border-bottom">
+                                                        <div class="col-md-12 d-flex">
+                                                            <div class="form-group row align-items-start mb-0"
+                                                                style="width:100%;">
+                                                                <div class="pr-0" style="width:11%">
+                                                                    <label class="pl-1 h6 mb-0">구분 <strong
+                                                                            class="text-danger">[필수]</strong>
+                                                                    </label>
+                                                                </div>
+                                                                <div style="width:89%;">
+                                                                    <ul
+                                                                        class="list-unstyled mb-0 d-flex align-items-center">
+                                                                        <li class="d-inline-block mr-2">
+                                                                            <fieldset>
+                                                                                <div class="radio">
+                                                                                    <input type="radio" name="bsradio3"
+                                                                                        id="radio3_1" checked>
+                                                                                    <label for="radio3_1">사용</label>
+                                                                                </div>
+                                                                            </fieldset>
+                                                                        </li>
+                                                                        <li class="d-inline-block mr-2">
+                                                                            <fieldset>
+                                                                                <div class="radio">
+                                                                                    <input type="radio" name="bsradio3"
+                                                                                        id="radio3_2">
+                                                                                    <label for="radio3_2">미사용</label>
+                                                                                </div>
+                                                                            </fieldset>
+                                                                        </li>
+                                                                    </ul>
+                                                                    <div class="row p-1">
+                                                                        <table id="disabled_cont"
+                                                                            class="w-100 comm_table row_direction mb-1">
+                                                                            <tr>
+                                                                                <td
+                                                                                    class="col-md-1 px-1 py-2 bg-primary bg-light">
+                                                                                    <strong>
+                                                                                        구분
+                                                                                    </strong>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <ul
+                                                                                        class="ml-2 list-unstyled mb-0  d-flex align-items-center">
+                                                                                        <li class="d-inline-block mr-2">
+                                                                                            <fieldset>
+                                                                                                <div class="checkbox">
+                                                                                                    <input
+                                                                                                        type="checkbox"
+                                                                                                        class="checkbox-input"
+                                                                                                        id="checkbox3"
+                                                                                                        checked="">
+                                                                                                    <label
+                                                                                                        for="checkbox3">C
+                                                                                                        Level</label>
+                                                                                                </div>
+                                                                                            </fieldset>
+                                                                                        </li>
+                                                                                        <li class="d-inline-block mr-2">
+                                                                                            <fieldset>
+                                                                                                <div class="checkbox">
+                                                                                                    <input
+                                                                                                        type="checkbox"
+                                                                                                        class="checkbox-input"
+                                                                                                        id="checkbox4">
+                                                                                                    <label
+                                                                                                        for="checkbox4">B
+                                                                                                        Level</label>
+                                                                                                </div>
+                                                                                            </fieldset>
+                                                                                        </li>
+                                                                                        <li class="d-inline-block mr-2">
+                                                                                            <fieldset>
+                                                                                                <div class="checkbox">
+                                                                                                    <input
+                                                                                                        type="checkbox"
+                                                                                                        class="checkbox-input"
+                                                                                                        id="checkbox5">
+                                                                                                    <label
+                                                                                                        for="checkbox5">A
+                                                                                                        Level</label>
+                                                                                                </div>
+                                                                                            </fieldset>
+                                                                                        </li>
+                                                                                        <li class="d-inline-block mr-2">
+                                                                                            <fieldset>
+                                                                                                <div class="checkbox">
+                                                                                                    <input
+                                                                                                        type="checkbox"
+                                                                                                        class="checkbox-input"
+                                                                                                        id="checkbox6">
+                                                                                                    <label
+                                                                                                        for="checkbox6">S
+                                                                                                        Level</label>
+                                                                                                </div>
+                                                                                            </fieldset>
+                                                                                        </li>
+                                                                                    </ul>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </table>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="w-100 d-flex align-items-center justify-content-center mt-2">
+                                                    <button onClick="history.back();" type="button"
+                                                        class="btn btn-outline-primary ml-1 cancel_btn px-3">
+                                                        <i class="bx bx-check d-block d-sm-none"></i>
+                                                        <span class="d-none d-sm-block">취소</span>
+                                                    </button>
+                                                    <button type="button" class="btn btn-primary ml-1 save_btn px-3">
+                                                        <i class="bx bx-check d-block d-sm-none"></i>
+                                                        <span class="d-none d-sm-block">저장</span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane" id="tab2" aria-labelledby="tab2-tab" role="tabpanel">
+                                            <div class="row">
+                                                <div class="col-md-12">
+
+                                                    <div class="row pb-2 mb-2 border-bottom">
+                                                        <div class="col-md-12 d-flex align-items-center ">
+                                                            <div class="col-md-6">
+                                                                <div class="form-group row align-items-center mb-0"
+                                                                    style="
+                                            width:100%;">
+                                                                    <div class=" pr-0" style="width:20%">
+                                                                        <label class="h6 mb-0">과정 소개</label>
+                                                                    </div>
+                                                                    <div class="d-flex" style="width:80%;">
+                                                                        <input type="text" id="input2_1"
+                                                                            class="form-control" name="input2_1"
+                                                                            placeholder="내용을 입력해 주세요">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row pb-2 mb-2 border-bottom">
+                                                        <div class="col-md-12 d-flex align-items-center ">
+                                                            <div class="col-md-6">
+                                                                <div class="form-group row align-items-center mb-0"
+                                                                    style="
+                                            width:100%;">
+                                                                    <div class=" pr-0" style="width:20%">
+                                                                        <label class="h6 mb-0">교육 목표</label>
+                                                                    </div>
+                                                                    <div class="d-flex" style="width:80%;">
+                                                                        <input type="text" id="input2_2"
+                                                                            class="form-control" name="input2_2"
+                                                                            placeholder="내용을 입력해 주세요">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row pb-2 mb-2 border-bottom">
+                                                        <div class="col-md-12 d-flex align-items-center ">
+                                                            <div class="col-md-6">
+                                                                <div class="form-group row align-items-center mb-0"
+                                                                    style="
+                                            width:100%;">
+                                                                    <div class=" pr-0" style="width:20%">
+                                                                        <label class="h6 mb-0">교육 대상</label>
+                                                                    </div>
+                                                                    <div class="d-flex" style="width:80%;">
+                                                                        <input type="text" id="input2_3"
+                                                                            class="form-control" name="input2_3"
+                                                                            placeholder="내용을 입력해 주세요">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row pb-2 mb-2 border-bottom">
+                                                        <div class="col-md-12 d-flex align-items-center ">
+                                                            <div class="col-md-6">
+                                                                <div class="form-group row align-items-center mb-0"
+                                                                    style="
+                                            width:100%;">
+                                                                    <div class=" pr-0" style="width:20%">
+                                                                        <label class="h6 mb-0">교육 내용</label>
+                                                                    </div>
+                                                                    <div class="d-flex" style="width:80%;">
+                                                                        <input type="text" id="input2_4"
+                                                                            class="form-control" name="input2_4"
+                                                                            placeholder="내용을 입력해 주세요">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row pb-2 mb-2 border-bottom">
+                                                        <div class="col-md-12 d-flex">
+                                                            <div class="form-group row align-items-start mb-0"
+                                                                style="width:100%;">
+                                                                <div class="pr-0" style="width:11%">
+                                                                    <label class="pl-1 h6 mb-0">과정선택 TIP
+                                                                    </label>
+                                                                </div>
+                                                                <div style="width:89%;">
+                                                                    <a id="addRowButton" href="javascript:void(0);"
+                                                                        class="btn btn-dark width-150 add_keyword_btn">항목추가</a>
+                                                                    <div class="table-responsive list_table mt-2">
+                                                                        <table
+                                                                            class="table mb-0 text-center table-striped"
+                                                                            style="border-collapse: unset; border-spacing: unset;">
+                                                                            <thead class="thead-dark">
+                                                                                <tr>
+                                                                                    <th width="10%">No.</th>
+                                                                                    <th width="80%">내용</th>
+                                                                                    <th>관리</th>
+                                                                                </tr>
+                                                                            </thead>
+                                                                            <tbody id="tableBody" class="font-small-3">
+                                                                                <tr>
+                                                                                    <td>1</td>
+                                                                                    <td>
+                                                                                        <input class="form-control"
+                                                                                            type="text"
+                                                                                            placeholder="내용을 입력해 주세요.">
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <button
+                                                                                            class="btn btn-icon btn-danger keyword_delete_btn"
+                                                                                            type="button"
+                                                                                            data-repeater-delete="">
+                                                                                            <i class="bx bx-x"></i>
+                                                                                        </button>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row pb-2 mb-2 border-bottom">
+                                                        <div class="col-md-12 d-flex">
+                                                            <div class="form-group row align-items-start mb-0"
+                                                                style="width:100%;">
+                                                                <div class="pr-0" style="width:11%">
+                                                                    <label class="pl-1 h6 mb-0">추천 대상
+                                                                    </label>
+                                                                </div>
+                                                                <div style="width:89%;">
+                                                                    <ul
+                                                                        class="ml-2 list-unstyled mb-0  d-flex align-items-center">
+                                                                        <li class="d-inline-block mr-2">
+                                                                            <fieldset>
+                                                                                <div class="checkbox">
+                                                                                    <input type="checkbox"
+                                                                                        class="checkbox-input"
+                                                                                        id="under2" checked="">
+                                                                                    <label for="under2">경력 2년
+                                                                                        미만</label>
+                                                                                </div>
+                                                                            </fieldset>
+                                                                        </li>
+                                                                        <li class="d-inline-block mr-2">
+                                                                            <fieldset>
+                                                                                <div class="checkbox">
+                                                                                    <input type="checkbox"
+                                                                                        class="checkbox-input"
+                                                                                        id="after2">
+                                                                                    <label for="after2">경력 2년
+                                                                                        이상 4년미만</label>
+                                                                                </div>
+                                                                            </fieldset>
+                                                                        </li>
+                                                                        <li class="d-inline-block mr-2">
+                                                                            <fieldset>
+                                                                                <div class="checkbox">
+                                                                                    <input type="checkbox"
+                                                                                        class="checkbox-input"
+                                                                                        id="after4">
+                                                                                    <label for="after4">경력 4년
+                                                                                        이상</label>
+                                                                                </div>
+                                                                            </fieldset>
+                                                                        </li>
+                                                                        <li class="d-inline-block mr-2">
+                                                                            <fieldset>
+                                                                                <div class="checkbox">
+                                                                                    <input type="checkbox"
+                                                                                        class="checkbox-input"
+                                                                                        id="engineer">
+                                                                                    <label for="engineer">엔지니어</label>
+                                                                                </div>
+                                                                            </fieldset>
+                                                                        </li>
+                                                                        <li class="d-inline-block mr-2">
+                                                                            <fieldset>
+                                                                                <div class="checkbox">
+                                                                                    <input type="checkbox"
+                                                                                        class="checkbox-input"
+                                                                                        id="admin">
+                                                                                    <label for="admin">유관부서/관리자</label>
+                                                                                </div>
+                                                                            </fieldset>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="w-100 d-flex align-items-center justify-content-center mt-2">
+                                                        <button onClick="history.back();" type="button"
+                                                            class="btn btn-outline-primary ml-1 cancel_btn px-3">
+                                                            <i class="bx bx-check d-block d-sm-none"></i>
+                                                            <span class="d-none d-sm-block">취소</span>
+                                                        </button>
+                                                        <button type="button"
+                                                            class="btn btn-primary ml-1 save_btn px-3">
+                                                            <i class="bx bx-check d-block d-sm-none"></i>
+                                                            <span class="d-none d-sm-block">저장</span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!-- TAB end -->
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+                <!-- Section end -->
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- END: Content-->
+
+
+    <!-- BEGIN: Vendor JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="/app-assets/vendors/js/vendors.min.js"></script>
+    <script src="/app-assets/fonts/LivIconsEvo/js/LivIconsEvo.tools.js"></script>
+    <script src="/app-assets/fonts/LivIconsEvo/js/LivIconsEvo.defaults.js"></script>
+    <script src="/app-assets/fonts/LivIconsEvo/js/LivIconsEvo.min.js"></script>
+    <!-- BEGIN Vendor JS-->
+
+    <!-- BEGIN: Page JS-->
+    <script src="/app-assets/vendors/js/extensions/sweetalert2.all.min.js"></script>
+    <!-- END: Page JS-->
+
+    <!-- BEGIN: Theme JS-->
+    <script src="/app-assets/js/core/app-menu.js"></script>
+    <script src="/app-assets/js/core/app.js"></script>
+    <script src="/app-assets/js/scripts/components.js"></script>
+    <script src="/app-assets/js/scripts/modal/components-modal.js"></script>
+
+    <!-- END: Theme JS-->
+
+    <!-- BEGIN: Custom JS-->
+    <script>
+        // tab 1 마지막 구분 미사용 radio 체크시
+        const checksDisabled = document.querySelectorAll("input[name=bsradio3]");
+        const disabledCont = document.getElementById("disabled_cont")
+
+        checksDisabled.forEach(checkDisabled => {
+
+            checkDisabled.onchange = () => {
+                if (checkDisabled.id === "radio3_2") {
+                    disabledCont.style.opacity = '.5'
+                    disabledCont.style.pointerEvents = 'none'
+                } else {
+                    disabledCont.style.opacity = '1'
+                    disabledCont.style.pointerEvents = 'all'
+                }
+
+            }
+        })
+
+        // tab2 첫번째 항목추가시 table 행 추가
+        document.getElementById('addRowButton').addEventListener('click', function () {
+            const tbody = document.getElementById('tableBody');
+            const rowCount = tbody.rows.length + 1;
+
+            // Create a new row
+            const newRow = document.createElement('tr');
+
+            // Create cells
+            const cell1 = document.createElement('td');
+            cell1.textContent = rowCount;
+
+            const cell2 = document.createElement('td');
+            cell2.innerHTML = `   <input class="form-control"
+            type="text"
+            placeholder="내용을 입력해 주세요.">`;
+
+
+            const cell3 = document.createElement('td');
+            cell3.innerHTML = `
+                <button
+                    class="btn btn-icon btn-danger keyword_delete_btn"
+                    type="button"
+                    data-repeater-delete="">
+                    <i class="bx bx-x"></i>
+                </button>`
+
+
+            // Append cells to the row
+            newRow.appendChild(cell1);
+            newRow.appendChild(cell2);
+            newRow.appendChild(cell3);
+
+            // Append row to tbody
+            tbody.appendChild(newRow);
+
+        });
+
+
+        // tab2 항목추가들의 x 선택시 메세지
+        $('.keyword_delete_btn').each(function () {
+            $('.keyword_delete_btn').on('click', function () {
+                Swal.fire({
+                    html: "검색어를 삭제하시겠습니까?",
+                    showCancelButton: true,
+                    confirmButtonColor: "#3085d6",
+                    cancelButtonColor: "#d33",
+                    confirmButtonText: "Yes"
+                }).then((result) => {
+                    console.log(result);
+                    if (result.value) {
+                        Swal.fire({
+                            html: "삭제되었습니다.",
+                            icon: "success"
+                        });
+                    }
+                });
+            });
+        });
+
+        // tab2 두번째 항목추가 누를 시 팝업에 table 에 추가 눌렀을 시
+        $('.add_new_save_btn').on('click', function () {
+            Swal.fire({
+                html: "추가되었습니다.",
+                showCancelButton: false,
+                confirmButtonColor: "#3085d6",
+                cancelButtonColor: "#d33",
+                confirmButtonText: "확인"
+            });
+        });
+
+    </script>
+    <!-- END: Custom JS-->
+
+
+</body>
+
+</html>

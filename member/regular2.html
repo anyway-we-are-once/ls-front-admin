@@ -1,0 +1,1303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <title>기술교육아카데미 어드민 페이지</title>
+
+    <!-- Start CSS -->
+    <!-- BEGIN: Fonts CSS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    <!-- END: Fonts CSS-->
+
+    <!-- BEGIN: Vendor CSS-->
+    <link rel="stylesheet" type="text/css" href="/app-assets/vendors/css/vendors.min.css">
+    <link rel="stylesheet" type="text/css" href="/app-assets/vendors/css/charts/apexcharts.css">
+    <link rel="stylesheet" type="text/css" href="/app-assets/vendors/css/extensions/dragula.min.css">
+    <!-- END: Vendor CSS-->
+
+    <!-- BEGIN: Theme CSS-->
+    <link rel="stylesheet" type="text/css" href="/app-assets/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/app-assets/css/bootstrap-extended.css">
+    <link rel="stylesheet" type="text/css" href="/app-assets/css/colors.css">
+    <link rel="stylesheet" type="text/css" href="/app-assets/css/components.css">
+    <link rel="stylesheet" type="text/css" href="/app-assets/css/themes/dark-layout.css">
+    <link rel="stylesheet" type="text/css" href="/app-assets/css/themes/semi-dark-layout.css">
+    <!-- END: Theme CSS-->
+
+    <!-- BEGIN: Page CSS-->
+    <link rel="stylesheet" type="text/css" href="/app-assets/css/core/menu/menu-types/vertical-menu.css">
+    <!-- END: Page CSS-->
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Gowun+Batang&family=Gowun+Dodum&family=Nanum+Myeongjo&display=swap');
+
+        * {
+            font-family: "Noto Sans KR", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+        }
+    </style>
+
+</head>
+
+<body
+    class="vertical-layout vertical-menu-modern boxicon-layout no-card-shadow 2-columns  navbar-sticky footer-static  "
+    data-open="click" data-menu="vertical-menu-modern" data-col="2-columns">
+
+    <!-- BEGIN: Header-->
+    <div class="header-navbar-shadow"></div>
+    <nav class="header-navbar main-header-navbar navbar-expand-lg navbar navbar-with-menu fixed-top ">
+        <div class="navbar-wrapper">
+            <div class="navbar-container content">
+                <div class="navbar-collapse" id="navbar-mobile">
+                    <div class="mr-auto float-left bookmark-wrapper d-flex align-items-center w-100">
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item mobile-menu d-xl-none mr-auto"><a
+                                    class="nav-link nav-menu-main menu-toggle hidden-xs is-active" href="#"><i
+                                        class="ficon bx bx-menu"></i></a></li>
+                        </ul>
+
+                        <ul class="nav navbar-nav" style="margin-left: auto">
+                            <li class="nav-item d-flex align-items-center">
+                                <a class="nav-link d-flex align-items-center" href="#" data-toggle="dropdown">
+                                    <p class="mb-0 d-flex mr-1">
+                                        <i class="bx bx-user"></i>
+                                    </p>
+                                    <p class="mb-0">
+                                        <strong>
+                                            관리자
+                                        </strong>
+                                    </p>
+                                </a>
+                                <a class="ml-1" style="text-decoration: underline;" href="/myapge/"> 마이페이지 </a>
+                                <a class="ml-1" style="text-decoration: underline;" href="javascript:void(0);"> 로그아웃
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- END: Header-->
+
+
+    <!-- BEGIN: Main Menu-->
+    <div class="main-menu menu-fixed menu-light menu-accordion menu-shadow expanded" data-scroll-to-active="true"
+        style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+        <div class="navbar-header expanded">
+            <ul class="nav navbar-nav" style="flex-wrap: nowrap;">
+                <li class="nav-item mr-auto">
+                    <a class="navbar-brand" href="/index.html">
+                        <img class="logo w-100" src="/static/images/logo.png" />
+                    </a>
+                </li>
+                <li class="nav-item nav-toggle d-none d-lg-block d-xl-none"><a class="nav-link modern-nav-toggle pr-0"
+                        data-toggle="collapse">
+                        close
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="main-menu-content ps ps--active-y">
+            <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation"
+                data-icon-style="">
+                <li class="nav-item"><a href="#"><span class="menu-title" data-i18n="Menu Levels">교육 관리</span></a>
+                    <ul class="menu-content">
+                        <li>
+                            <a href="/edu/process.html">
+
+                                <span class="menu-item" data-i18n="Second Level">교육 과정 관리</span>
+                                <i class="bx bx-right-arrow-alt mr-0"></i>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="/edu/schedule.html">
+                                <span class="menu-item" data-i18n="Second Level">교육 일정 관리</span>
+                                <i class="bx bx-right-arrow-alt mr-0"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="#"><span class="menu-title" data-i18n="Menu Levels">회원 관리</span></a>
+                    <ul class="menu-content">
+                        <li>
+                            <a href="/member/regular.html">
+
+                                <span class="menu-item" data-i18n="Second Level">일반 회원</span>
+                                <i class="bx bx-right-arrow-alt mr-0"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/member/withdrawal.html">
+                                <span class="menu-item" data-i18n="Second Level">탈퇴 회원</span>
+                                <i class="bx bx-right-arrow-alt mr-0"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="#"><span class="menu-title" data-i18n="Menu Levels">컨소시엄 관리</span></a>
+                    <ul class="menu-content">
+                        <li>
+                            <a href="/consortium/status.html">
+                                <span class="menu-item" data-i18n="Second Level">신청 현황</span>
+                                <i class="bx bx-right-arrow-alt mr-0"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/consortium/corporate.html">
+                                <span class="menu-item" data-i18n="Second Level">협약 기업 관리</span>
+                                <i class="bx bx-right-arrow-alt mr-0"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="#"><span class="menu-title" data-i18n="Menu Levels">사이트 관리</span></a>
+                    <ul class="menu-content">
+                        <li>
+                            <a href="/site/popup.html">
+                                <span class="menu-item" data-i18n="Second Level">팝업 관리</span>
+                                <i class="bx bx-right-arrow-alt mr-0"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/site/main.html">
+                                <span class="menu-item" data-i18n="Second Level">메인 관리</span>
+                                <i class="bx bx-right-arrow-alt mr-0"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/site/history.html">
+                                <span class="menu-item" data-i18n="Second Level">연혁 관리</span>
+                                <i class="bx bx-right-arrow-alt mr-0"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/site/award.html">
+                                <span class="menu-item" data-i18n="Second Level">수상경력 관리</span>
+                                <i class="bx bx-right-arrow-alt mr-0"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/site/infra.html">
+                                <span class="menu-item" data-i18n="Second Level">훈련 인프라 관리</span>
+                                <i class="bx bx-right-arrow-alt mr-0"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="#"><span class="menu-title" data-i18n="Menu Levels">게시판 관리</span></a>
+                    <ul class="menu-content">
+                        <li>
+                            <a href="/board/inquiry.html">
+                                <span class="menu-item" data-i18n="Second Level">1:1 문의 관리</span>
+                                <i class="bx bx-right-arrow-alt mr-0"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/board/notice.html">
+                                <span class="menu-item" data-i18n="Second Level">공지사항</span>
+                                <i class="bx bx-right-arrow-alt mr-0"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/board/reference.html">
+                                <span class="menu-item" data-i18n="Second Level">자료실</span>
+                                <i class="bx bx-right-arrow-alt mr-0"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/board/faq.html">
+                                <span class="menu-item" data-i18n="Second Level">자주 묻는 질문</span>
+                                <i class="bx bx-right-arrow-alt mr-0"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="#"><span class="menu-title" data-i18n="Menu Levels">관리자 관리</span></a>
+                    <ul class="menu-content">
+                        <li>
+                            <a href="/admin/list.html">
+                                <span class="menu-item" data-i18n="Second Level">관리자 목록</span>
+                                <i class="bx bx-right-arrow-alt mr-0"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/admin/receipt.html">
+                                <span class="menu-item" data-i18n="Second Level">문의 수신 관리</span>
+                                <i class="bx bx-right-arrow-alt mr-0"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="#"><span class="menu-title" data-i18n="Menu Levels">보안 관리</span></a>
+                    <ul class="menu-content">
+                        <li>
+                            <a href="/security/">
+                                <span class="menu-item" data-i18n="Second Level">허용 IP 관리</span>
+                                <i class="bx bx-right-arrow-alt mr-0"></i>
+                            </a>
+                        </li>
+
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- END: Main Menu-->
+
+    <!-- BEGIN: Content-->
+    <!-- 03.회원관리_일반회원_상세  -->
+    <div class="app-content content">
+        <div class="content-overlay"></div>
+        <div class="content-wrapper">
+            <div class="content-header row">
+                <div class="content-header-left col-12 mb-2 mt-1">
+                    <div class="row breadcrumbs-top">
+                        <div class="col-12">
+                            <h3 class="content-header-title pr-1 mb-0 border-right-0">
+                                <strong>
+                                    일반 회원
+                                </strong>
+                            </h3>
+                            <div class="breadcrumb-wrapper col-12">
+                                <ol class="breadcrumb p-0 mb-0 justify-content-end">
+                                    <li class="breadcrumb-item"><a href="index.html"><i class="bx bx-home-alt"></i></a>
+                                    </li>
+                                    <li class="breadcrumb-item"><a href="/member/regular.html">회원 관리</a>
+                                    </li>
+                                    <li class="breadcrumb-item"><a href="/member/regular.html">일반 회원</a>
+                                    </li>
+                                    <li class="breadcrumb-item"><a href="/member/regular2.html">상세보기</a>
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card background-color card w-100 b-1 mb-0">
+                            <div class="card-body">
+                                <ul class="nav user-profile-nav justify-content-center  justify-content-md-start nav-tabs border-bottom-0"
+                                    role="tablist">
+                                    <li class="nav-item pb-0">
+                                        <a class=" nav-link d-flex px-1 active" id="tab1-tab" data-toggle="tab"
+                                            href="#tab1" aria-controls="tab1" role="tab" aria-selected="true"><span
+                                                class="d-none d-md-block">회원 정보</span></a>
+                                    </li>
+                                    <li class="nav-item pb-0">
+                                        <a class="nav-link d-flex px-1" id="tab2-tab" data-toggle="tab" href="#tab2"
+                                            aria-controls="tab2" role="tab" aria-selected="false"><span
+                                                class="d-none d-md-block">교육 참여 정보</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item pb-0">
+                                        <a class="nav-link d-flex px-1" id="tab3-tab" data-toggle="tab" href="#tab3"
+                                            aria-controls="tab3" role="tab" aria-selected="false"><span
+                                                class="d-none d-md-block">관리자 메모</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="card-body">
+                                <!-- TAB -->
+                                <div class="tab-content">
+                                    <div class="tab-pane active" id="tab1" aria-labelledby="tab1-tab" role="tabpanel">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="card-header mb-3 p-0">
+                                                    <h4 class="card-title">회원 기본 정보</h4>
+                                                </div>
+                                                <div class="row pb-2 mb-2 border-bottom">
+                                                    <div class="col-md-12 d-flex justify-content-between">
+                                                        <div class="col-md-4">
+                                                            <div class="form-group row align-items-center mb-0"
+                                                                style=" width:100%;">
+                                                                <div class=" pr-0" style="width:25%">
+                                                                    <label class="h6 mb-0">상태</label>
+                                                                </div>
+                                                                <div style="width:55%;">
+                                                                    <fieldset class="form-group mb-0 p-0">
+                                                                        <select class="form-control"
+                                                                            id="search_category">
+                                                                            <option>가입대기</option>
+                                                                            <option>가입대기</option>
+                                                                            <option>가입대기</option>
+                                                                        </select>
+                                                                    </fieldset>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="form-group row align-items-center mb-0"
+                                                                style=" width:100%;">
+                                                                <div class=" pr-0" style="width:25%">
+                                                                    <label class="h6 mb-0">가입일</label>
+                                                                </div>
+                                                                <div style="width:55%;">
+                                                                    <input type="text" id="input1" class="form-control"
+                                                                        name="input1" readonly value="2024-10-30">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="form-group row align-items-center mb-0"
+                                                                style=" width:100%;">
+                                                                <div class=" pr-0" style="width:25%">
+                                                                    <label class="h6 mb-0">마지막 접속일</label>
+                                                                </div>
+                                                                <div style="width:55%;">
+                                                                    <input type="text" id="input2" class="form-control"
+                                                                        name="input2" readonly value="2024-10-30 23:00">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row pb-2 mb-2 border-bottom">
+                                                    <div class="col-md-12 d-flex">
+                                                        <div class="col-md-4">
+                                                            <div class="form-group row align-items-center mb-0"
+                                                                style=" width:100%;">
+                                                                <div class=" pr-0" style="width:25%">
+                                                                    <label class="h6 mb-0">구분</label>
+                                                                </div>
+                                                                <div style="width:55%;">
+                                                                    <fieldset class="form-group mb-0 p-0">
+                                                                        <select class="form-control"
+                                                                            id="search_category">
+                                                                            <option>농업기계</option>
+                                                                            <option>농업기계</option>
+                                                                            <option>농업기계</option>
+                                                                        </select>
+                                                                    </fieldset>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="form-group row align-items-center mb-0"
+                                                                style=" width:100%;">
+                                                                <div class=" pr-0" style="width:25%">
+                                                                    <label class="h6 mb-0">회원명(ID)</label>
+                                                                </div>
+                                                                <div style="width:55%;">
+                                                                    <input type="text" id="input3" class="form-control"
+                                                                        name="input3" readonly value="박성현 (lsmtron01)">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="form-group row align-items-center mb-0"
+                                                                style=" width:100%;">
+                                                                <div class=" pr-0" style="width:25%">
+                                                                    <label class="h6 mb-0">비밀번호</label>
+                                                                </div>
+                                                                <div style="width:55%;">
+                                                                    <button
+                                                                        class="btn btn-dark text-uppercase width-200">
+                                                                        임시비밀번호 발송
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row pb-2 mb-2 border-bottom">
+                                                    <div class="col-md-12 d-flex">
+                                                        <div class="col-md-4">
+                                                            <div class="form-group row align-items-center mb-0"
+                                                                style=" width:100%;">
+                                                                <div class=" pr-0" style="width:25%">
+                                                                    <label class="h6 mb-0">생년월일</label>
+                                                                </div>
+                                                                <div style="width:55%;">
+                                                                    <input type="text" id="input4" class="form-control"
+                                                                        name="input4" readonly value="901010">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="form-group row align-items-center mb-0"
+                                                                style=" width:100%;">
+                                                                <div class=" pr-0" style="width:25%">
+                                                                    <label class="h6 mb-0">휴대폰번호</label>
+                                                                </div>
+                                                                <div style="width:55%;">
+                                                                    <input type="text" id="input5" class="form-control"
+                                                                        name="input5" readonly value="010-0000-0000">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="form-group row align-items-center mb-0"
+                                                                style=" width:100%;">
+                                                                <div class=" pr-0" style="width:25%">
+                                                                    <label class="h6 mb-0">이메일</label>
+                                                                </div>
+                                                                <div style="width:55%;">
+                                                                    <input type="text" id="input6" class="form-control"
+                                                                        name="input6" readonly value="ls@lsmtron.com">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row pb-2 mb-2 border-bottom">
+                                                    <div class="col-md-12 d-flex">
+                                                        <div class="col-md-4">
+                                                            <div class="form-group row align-items-center mb-0"
+                                                                style=" width:100%;">
+                                                                <div class=" pr-0" style="width:25%">
+                                                                    <label class="h6 mb-0">등급분류</label>
+                                                                </div>
+                                                                <div style="width:55%;">
+                                                                    <fieldset class="form-group mb-0 p-0">
+                                                                        <select class="form-control"
+                                                                            id="search_category">
+                                                                            <option>A Level</option>
+                                                                            <option>A Level</option>
+                                                                            <option>A Level</option>
+                                                                        </select>
+                                                                    </fieldset>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="form-group row align-items-center mb-0"
+                                                                style=" width:100%;">
+                                                                <div class=" pr-0" style="width:25%">
+                                                                    <label class="h6 mb-0">부서</label>
+                                                                </div>
+                                                                <div style="width:55%;">
+                                                                    <input type="text" id="input7" class="form-control"
+                                                                        name="input7" readonly value="-">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="form-group row align-items-center mb-0"
+                                                                style=" width:100%;">
+                                                                <div class=" pr-0" style="width:25%">
+                                                                    <label class="h6 mb-0">직위</label>
+                                                                </div>
+                                                                <div style="width:55%;">
+                                                                    <input type="text" id="input8" class="form-control"
+                                                                        name="input8" readonly value="엔지니어">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="card-header mb-3 p-0">
+                                                    <h4 class="card-title d-flex align-items-center">회원 소속 정보
+                                                        <button id="add_list" type="button"
+                                                            class="display-block btn btn-dark width-150 add_list ml-2"
+                                                            data-toggle="modal" data-target="#add_item_modal">
+                                                            소속 정보 변경
+                                                        </button>
+                                                        <!-- add_list_modal -->
+                                                        <div class="modal fade" id="add_item_modal" tabindex="-1"
+                                                            role="dialog" aria-labelledby="myModalLabel1"
+                                                            aria-hidden="true">
+                                                            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable"
+                                                                style="margin: 1rem 30rem; max-width: 100%;">
+                                                                <div class="modal-content">
+                                                                    <div class="modal-header">
+                                                                        <h1 class="modal-title fs-5"
+                                                                            id="exampleModalLabel">
+                                                                            회원 소속 정보 변경</h1>
+                                                                        <button type="button" class="close"
+                                                                            data-dismiss="modal" aria-label="Close2">
+                                                                            <i class="bx bx-x"></i>
+                                                                        </button>
+                                                                    </div>
+                                                                    <div class="modal-body">
+                                                                        <div class="part_sec">
+                                                                            <div class="pb-2 mb-2">
+                                                                                <h6 class="text-center mb-2">회원 소속정보를
+                                                                                    변경합니다.
+                                                                                </h6>
+                                                                                <div class="col-md-12 d-flex">
+                                                                                    <div class="form-group align-items-center mb-0  "
+                                                                                        style="
+                                                                                       width:100%;">
+                                                                                        <ul
+                                                                                            class="list-unstyled mb-0 d-flex justify-content-center align-items-center w-100">
+                                                                                            <li
+                                                                                                class="d-inline-block mr-2">
+                                                                                                <fieldset>
+                                                                                                    <div class="radio">
+                                                                                                        <input
+                                                                                                            type="radio"
+                                                                                                            name="modal_bsradio"
+                                                                                                            id="modal_radioall"
+                                                                                                            checked>
+                                                                                                        <label
+                                                                                                            for="modal_radioall">컨소시엄
+                                                                                                            기업
+                                                                                                            검색</label>
+                                                                                                    </div>
+                                                                                                </fieldset>
+                                                                                            </li>
+                                                                                            <li
+                                                                                                class="d-inline-block mr-2">
+                                                                                                <fieldset>
+                                                                                                    <div class="radio">
+                                                                                                        <input
+                                                                                                            type="radio"
+                                                                                                            name="modal_bsradio"
+                                                                                                            id="modal_radio1"
+                                                                                                            checked>
+                                                                                                        <label
+                                                                                                            for="modal_radio1">직접입력</label>
+                                                                                                    </div>
+                                                                                                </fieldset>
+                                                                                            </li>
+                                                                                        </ul>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!-- 컨소시엄 기업 검색시 -->
+                                                                            <!-- 회원 소속 정보 변경 step1 -->
+                                                                            <div class="pb-2 border-bottom">
+                                                                                <div class="form-group align-items-center mb-0 "
+                                                                                    style="width:100%;">
+                                                                                    <div
+                                                                                        class="d-flex justify-content-center w-100">
+                                                                                        <fieldset
+                                                                                            class="form-group mb-0 col-md-4 p-0">
+                                                                                            <select class="form-control"
+                                                                                                id="search_category">
+                                                                                                <option>
+                                                                                                    회사명
+                                                                                                </option>
+                                                                                                <option>
+                                                                                                    회사명
+                                                                                                </option>
+                                                                                                <option>
+                                                                                                    회사명
+                                                                                                </option>
+                                                                                            </select>
+                                                                                        </fieldset>
+                                                                                        <fieldset
+                                                                                            class="form-group mb-0 col-md-4 p-0 ml-1">
+                                                                                            <input type="text"
+                                                                                                id="inputmodal"
+                                                                                                class="form-control"
+                                                                                                name="inputmodal"
+                                                                                                placeholder="텍스트 영역">
+                                                                                        </fieldset>
+                                                                                        <button type="button"
+                                                                                            class="display-block btn btn-dark width-150  ml-1">검색
+                                                                                        </button>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!-- 회원 소속 정보 변경 step2 || stpe1도 같이  -->
+                                                                            <div class="pl-2 pr-2 "
+                                                                                style="overflow: auto; max-height: 16.1rem;">
+                                                                                <div class="form-group align-items-center mb-0 pb-2 pt-2  border-bottom"
+                                                                                    style="width:100%;">
+                                                                                    <div
+                                                                                        class="d-flex justify-content-between w-100 align-items-center">
+                                                                                        <dl class="mb-0">
+                                                                                            <dt class="h5">
+                                                                                                <strong>
+                                                                                                    LS트랙터 OO대리점
+                                                                                                </strong>
+                                                                                            </dt>
+                                                                                            <dd class="h6">
+                                                                                                대표자 : 홍길동
+                                                                                            </dd>
+                                                                                            <dd class="h6 mb-0">
+                                                                                                주소 : 서울시 강남구 강남대로 11 ...
+                                                                                            </dd>
+                                                                                        </dl>
+                                                                                        <button type="button"
+                                                                                            class="display-block btn btn-dark width-80  ml-1">선택
+                                                                                        </button>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="form-group align-items-center mb-0 pb-2  pt-2 border-bottom"
+                                                                                    style="width:100%;">
+                                                                                    <div
+                                                                                        class="d-flex justify-content-between w-100 align-items-center">
+                                                                                        <dl class="mb-0">
+                                                                                            <dt class="h5">
+                                                                                                <strong>
+                                                                                                    LS트랙터 OO대리점
+                                                                                                </strong>
+                                                                                            </dt>
+                                                                                            <dd class="h6">
+                                                                                                대표자 : 홍길동
+                                                                                            </dd>
+                                                                                            <dd class="h6 mb-0">
+                                                                                                주소 : 서울시 강남구 강남대로 11 ...
+                                                                                            </dd>
+                                                                                        </dl>
+                                                                                        <button type="button"
+                                                                                            class="display-block btn btn-dark width-80  ml-1">선택
+                                                                                        </button>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                                <div class="form-group align-items-center mb-0 pb-2  pt-2 border-bottom"
+                                                                                    style="width:100%;">
+                                                                                    <div
+                                                                                        class="d-flex justify-content-between w-100 align-items-center">
+                                                                                        <dl class="mb-0">
+                                                                                            <dt class="h5">
+                                                                                                <strong>
+                                                                                                    LS트랙터 OO대리점
+                                                                                                </strong>
+                                                                                            </dt>
+                                                                                            <dd class="h6">
+                                                                                                대표자 : 홍길동
+                                                                                            </dd>
+                                                                                            <dd class="h6 mb-0">
+                                                                                                주소 : 서울시 강남구 강남대로 11 ...
+                                                                                            </dd>
+                                                                                        </dl>
+                                                                                        <button type="button"
+                                                                                            class="display-block btn btn-dark width-80  ml-1">선택
+                                                                                        </button>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <!-- 직접입력시 -->
+                                                                            <!-- 회원 소속 정보 변경 -->
+                                                                            <div>
+                                                                                <div class="pt-2 pb-2 border-bottom">
+                                                                                    <div class="form-group align-items-center mb-0 "
+                                                                                        style="width:100%;">
+                                                                                        <div
+                                                                                            class="d-flex justify-content-center w-100 pl-2 pr-2">
+                                                                                            <div class="form-group row align-items-center mb-0"
+                                                                                                style=" width:100%;">
+                                                                                                <div class=" pr-0"
+                                                                                                    style="width:30%">
+                                                                                                    <label
+                                                                                                        class="h6 mb-0">사업자번호
+                                                                                                        <span
+                                                                                                            class="text-danger">
+                                                                                                            [필수]
+                                                                                                        </span></label>
+                                                                                                </div>
+                                                                                                <div style="width:70%;">
+                                                                                                    <input type="text"
+                                                                                                        id="inputmodal2"
+                                                                                                        class="form-control"
+                                                                                                        name="inputmodal2"
+                                                                                                        placeholder="내용을 입력해 주세요">
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="pt-2 pb-2 border-bottom">
+                                                                                    <div class="form-group align-items-center mb-0 "
+                                                                                        style="width:100%;">
+                                                                                        <div
+                                                                                            class="d-flex justify-content-center w-100 pl-2 pr-2">
+                                                                                            <div class="form-group row align-items-center mb-0"
+                                                                                                style=" width:100%;">
+                                                                                                <div class=" pr-0"
+                                                                                                    style="width:30%">
+                                                                                                    <label
+                                                                                                        class="h6 mb-0">회사명
+                                                                                                        <span
+                                                                                                            class="text-danger">
+                                                                                                            [필수]
+                                                                                                        </span></label>
+                                                                                                </div>
+                                                                                                <div style="width:70%;">
+                                                                                                    <input type="text"
+                                                                                                        id="inputmodal3"
+                                                                                                        class="form-control"
+                                                                                                        name="inputmodal3"
+                                                                                                        placeholder="내용을 입력해 주세요">
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="pt-2 pb-2 border-bottom">
+                                                                                    <div class="form-group align-items-center mb-0 "
+                                                                                        style="width:100%;">
+                                                                                        <div
+                                                                                            class="d-flex justify-content-center w-100 pl-2 pr-2">
+                                                                                            <div class="form-group row align-items-center mb-0"
+                                                                                                style=" width:100%;">
+                                                                                                <div class=" pr-0"
+                                                                                                    style="width:30%">
+                                                                                                    <label
+                                                                                                        class="h6 mb-0">대표자
+                                                                                                        <span
+                                                                                                            class="text-danger">
+                                                                                                            [필수]
+                                                                                                        </span></label>
+                                                                                                </div>
+                                                                                                <div style="width:70%;">
+                                                                                                    <input type="text"
+                                                                                                        id="inputmodal3"
+                                                                                                        class="form-control"
+                                                                                                        name="inputmodal3"
+                                                                                                        placeholder="내용을 입력해 주세요">
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="pt-2 pb-2 border-bottom">
+                                                                                    <div class="form-group align-items-center mb-0 "
+                                                                                        style="width:100%;">
+                                                                                        <div
+                                                                                            class="d-flex justify-content-center w-100 pl-2 pr-2">
+                                                                                            <div class="form-group row align-items-center mb-0"
+                                                                                                style=" width:100%;">
+                                                                                                <div class=" pr-0"
+                                                                                                    style="width:30%">
+                                                                                                    <label
+                                                                                                        class="h6 mb-0">FAX</label>
+                                                                                                </div>
+                                                                                                <div style="width:70%;">
+                                                                                                    <input type="text"
+                                                                                                        id="inputmodal3"
+                                                                                                        class="form-control"
+                                                                                                        name="inputmodal3"
+                                                                                                        placeholder="내용을 입력해 주세요">
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="pt-2 pb-2 border-bottom">
+                                                                                    <div class="form-group align-items-center mb-0 "
+                                                                                        style="width:100%;">
+                                                                                        <div
+                                                                                            class="d-flex justify-content-center w-100 pl-2 pr-2">
+                                                                                            <div class="form-group row align-items-center mb-0"
+                                                                                                style=" width:100%;">
+                                                                                                <div class=" pr-0"
+                                                                                                    style="width:30%">
+                                                                                                    <label
+                                                                                                        class="h6 mb-0">주소
+                                                                                                        <span
+                                                                                                            class="text-danger">[필수]</span></label>
+                                                                                                </div>
+                                                                                                <div style="width:70%;">
+                                                                                                    <div>
+                                                                                                        <button
+                                                                                                            type="button"
+                                                                                                            class="display-block btn btn-dark width-80">검색
+                                                                                                        </button>
+                                                                                                    </div>
+                                                                                                    <div class="mt-1">
+                                                                                                        <input
+                                                                                                            type="text"
+                                                                                                            id="inputmodal4"
+                                                                                                            class="form-control"
+                                                                                                            name="inputmodal4"
+                                                                                                            disabled
+                                                                                                            placeholder="우편번호">
+                                                                                                    </div>
+                                                                                                    <div class="mt-1">
+                                                                                                        <input
+                                                                                                            type="text"
+                                                                                                            id="inputmodal5"
+                                                                                                            class="form-control"
+                                                                                                            name="inputmodal5"
+                                                                                                            disabled
+                                                                                                            placeholder="기본주소">
+                                                                                                    </div>
+                                                                                                    <div class="mt-1">
+                                                                                                        <input
+                                                                                                            type="text"
+                                                                                                            id="inputmodal6"
+                                                                                                            class="form-control"
+                                                                                                            name="inputmodal6"
+                                                                                                            placeholder="상세주소">
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <button type="button"
+                                                                                    class="display-block btn btn-dark mt-2 width-150"
+                                                                                    style="margin: 0 auto;">저장
+                                                                                </button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </h4>
+                                                </div>
+                                                <div class="row pb-2 mb-2 border-bottom">
+                                                    <div class="col-md-12 d-flex justify-content-between">
+                                                        <div class="col-md-4">
+                                                            <div class="form-group row align-items-center mb-0"
+                                                                style=" width:100%;">
+                                                                <div class=" pr-0" style="width:25%">
+                                                                    <label class="h6 mb-0">사업자번호</label>
+                                                                </div>
+                                                                <div style="width:55%;">
+                                                                    <input type="text" id="input2_1"
+                                                                        class="form-control" name="input2_1" readonly
+                                                                        value="000-00-0000">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="form-group row align-items-center mb-0"
+                                                                style=" width:100%;">
+                                                                <div class=" pr-0" style="width:25%">
+                                                                    <label class="h6 mb-0">회사명</label>
+                                                                </div>
+                                                                <div style="width:55%;">
+                                                                    <input type="text" id="input2_2"
+                                                                        class="form-control" name="input2_2" readonly
+                                                                        value="000-00-0000">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="form-group row align-items-center mb-0"
+                                                                style=" width:100%;">
+                                                                <div class=" pr-0" style="width:25%">
+                                                                    <label class="h6 mb-0">컨소시엄 협약</label>
+                                                                </div>
+                                                                <div style="width:55%;">
+                                                                    <input type="text" id="input2_3"
+                                                                        class="form-control" name="input2_3" readonly
+                                                                        value="Y(협약)">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row pb-2 mb-2 border-bottom">
+                                                    <div class="col-md-12 d-flex">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group row align-items-center mb-0"
+                                                                style=" width:100%;">
+                                                                <div class=" pr-0" style="width:16%">
+                                                                    <label class="h6 mb-0">대표자</label>
+                                                                </div>
+                                                                <div style="width:60%;">
+                                                                    <input type="text" id="input2_4"
+                                                                        class="form-control" name="input2_4" readonly
+                                                                        value="홍길동">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-group row align-items-center mb-0"
+                                                                style=" width:100%;">
+                                                                <div class=" pr-0" style="width:16%">
+                                                                    <label class="h6 mb-0">FAX</label>
+                                                                </div>
+                                                                <div style="width:60%;">
+                                                                    <input type="text" id="input2_5"
+                                                                        class="form-control" name="input2_5" readonly
+                                                                        value="02-000-0000">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row pb-2 mb-2 border-bottom">
+                                                    <div class="col-md-12 d-flex">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group row align-items-center mb-0"
+                                                                style=" width:100%;">
+                                                                <div class=" pr-0" style="width:16%">
+                                                                    <label class="h6 mb-0">주소</label>
+                                                                </div>
+                                                                <div style="width:60%;">
+                                                                    <input type="text" id="input2_6"
+                                                                        class="form-control" name="input2_6" readonly
+                                                                        value="(00000) 서울시 강남구 강남대로 11">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="card-header mb-3 p-0">
+                                                    <h4 class="card-title">회원 추가 정보
+                                                    </h4>
+                                                </div>
+                                                <div class="row pb-2 mb-2 border-bottom">
+                                                    <div class="col-md-12 d-flex justify-content-between">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group row align-items-center mb-0"
+                                                                style=" width:100%;">
+                                                                <div class=" pr-0" style="width:20%">
+                                                                    <label class="h6 mb-0">마케팅 수신동의 여부</label>
+                                                                </div>
+                                                                <div style="width:60%;">
+                                                                    <input type="text" id="input3_1"
+                                                                        class="form-control" name="input3_1" readonly
+                                                                        value="Y">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row pb-2 mb-2 border-bottom">
+                                                    <div class="col-md-12 d-flex">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group row align-items-center mb-0"
+                                                                style=" width:100%;">
+                                                                <div class=" pr-0" style="width:20%">
+                                                                    <label class="h6 mb-0">경력</label>
+                                                                </div>
+                                                                <div style="width:60%;">
+                                                                    <ul
+                                                                        class="list-unstyled mb-0  d-flex align-items-center">
+                                                                        <li class="d-inline-block mr-2">
+                                                                            <fieldset>
+                                                                                <div class="checkbox">
+                                                                                    <input type="checkbox"
+                                                                                        class="checkbox-input"
+                                                                                        id="under2" checked="">
+                                                                                    <label for="under2">경력 2년
+                                                                                        미만</label>
+                                                                                </div>
+                                                                            </fieldset>
+                                                                        </li>
+                                                                        <li class="d-inline-block mr-2">
+                                                                            <fieldset>
+                                                                                <div class="checkbox">
+                                                                                    <input type="checkbox"
+                                                                                        class="checkbox-input"
+                                                                                        id="after2">
+                                                                                    <label for="after2">2년
+                                                                                        이상 5년 미만</label>
+                                                                                </div>
+                                                                            </fieldset>
+                                                                        </li>
+                                                                        <li class="d-inline-block mr-2">
+                                                                            <fieldset>
+                                                                                <div class="checkbox">
+                                                                                    <input type="checkbox"
+                                                                                        class="checkbox-input"
+                                                                                        id="after4">
+                                                                                    <label for="after5">5년
+                                                                                        이상</label>
+                                                                                </div>
+                                                                            </fieldset>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-group row align-items-center mb-0"
+                                                                style=" width:100%;">
+                                                                <div class=" pr-0" style="width:20%">
+                                                                    <label class="h6 mb-0">직무</label>
+                                                                </div>
+                                                                <div style="width:60%;">
+                                                                    <ul
+                                                                        class="ml-2 list-unstyled mb-0  d-flex align-items-center">
+                                                                        <li class="d-inline-block mr-2">
+                                                                            <fieldset>
+                                                                                <div class="checkbox">
+                                                                                    <input type="checkbox"
+                                                                                        class="checkbox-input"
+                                                                                        id="checkbox1" checked="">
+                                                                                    <label for="checkbox1">엔지니어</label>
+                                                                                </div>
+                                                                            </fieldset>
+                                                                        </li>
+                                                                        <li class="d-inline-block mr-2">
+                                                                            <fieldset>
+                                                                                <div class="checkbox">
+                                                                                    <input type="checkbox"
+                                                                                        class="checkbox-input"
+                                                                                        id="checkbox2">
+                                                                                    <label for="checkbox2">관리자</label>
+                                                                                </div>
+                                                                            </fieldset>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row pb-2 mb-2 border-bottom">
+                                                    <div class="col-md-12 d-flex">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group row align-items-center mb-0"
+                                                                style=" width:100%;">
+                                                                <div class=" pr-0" style="width:20%">
+                                                                    <label class="h6 mb-0">관심사</label>
+                                                                </div>
+                                                                <div style="width:60%;">
+                                                                    <ul
+                                                                        class=" list-unstyled mb-0  d-flex align-items-center">
+                                                                        <li class="d-inline-block mr-2">
+                                                                            <fieldset>
+                                                                                <div class="checkbox">
+                                                                                    <input type="checkbox"
+                                                                                        class="checkbox-input"
+                                                                                        id="checkbox2_1" checked="">
+                                                                                    <label
+                                                                                        for="checkbox2_1">사출성형</label>
+                                                                                </div>
+                                                                            </fieldset>
+                                                                        </li>
+                                                                        <li class="d-inline-block mr-2">
+                                                                            <fieldset>
+                                                                                <div class="checkbox">
+                                                                                    <input type="checkbox"
+                                                                                        class="checkbox-input"
+                                                                                        id="checkbox2_2">
+                                                                                    <label
+                                                                                        for="checkbox2_2">사출금형</label>
+                                                                                </div>
+                                                                            </fieldset>
+                                                                        </li>
+                                                                        <li class="d-inline-block mr-2">
+                                                                            <fieldset>
+                                                                                <div class="checkbox">
+                                                                                    <input type="checkbox"
+                                                                                        class="checkbox-input"
+                                                                                        id="checkbox2_3">
+                                                                                    <label
+                                                                                        for="checkbox2_3">유지보수</label>
+                                                                                </div>
+                                                                            </fieldset>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="w-100 d-flex align-items-center justify-content-center mt-2">
+                                                <button onClick="history.back();" type="button"
+                                                    class="btn btn-outline-primary ml-1 cancel_btn px-3">
+                                                    <i class="bx bx-check d-block d-sm-none"></i>
+                                                    <span class="d-none d-sm-block">목록</span>
+                                                </button>
+                                                <button type="button" class="btn btn-primary ml-1 save_btn px-3">
+                                                    <i class="bx bx-check d-block d-sm-none"></i>
+                                                    <span class="d-none d-sm-block">저장</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane" id="tab2" aria-labelledby="tab2-tab" role="tabpanel">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="table-responsive list_table mt-2">
+                                                    <table class="table mb-0 text-center table-striped"
+                                                        style="border-collapse: unset; border-spacing: unset;">
+                                                        <thead class="thead-dark">
+                                                            <tr>
+                                                                <th>No</th>
+                                                                <th>상태</th>
+                                                                <th>신청일</th>
+                                                                <th>교육분류</th>
+                                                                <th>과정명</th>
+                                                                <th>수료여부</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody class="font-small-3">
+                                                            <tr>
+                                                                <td>10</td>
+                                                                <td>승인대기</td>
+                                                                <td>2024-10-30</td>
+                                                                <td>농업기계</td>
+                                                                <td>
+                                                                    초급 기술자를 위한 농업기계 기초기술
+                                                                </td>
+                                                                <td>
+                                                                    미수료
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>10</td>
+                                                                <td>승인대기</td>
+                                                                <td>2024-10-30</td>
+                                                                <td>농업기계</td>
+                                                                <td>
+                                                                    초급 기술자를 위한 농업기계 기초기술
+                                                                </td>
+                                                                <td
+                                                                    class="d-flex align-items-center justify-content-center">
+                                                                    수료
+                                                                    <button id="add_list" type="button"
+                                                                        class="display-block btn btn-dark width-150 ml-1">
+                                                                        수료증 출력
+                                                                    </button>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+
+                                                <!-- pagination -->
+                                                <nav aria-label="Page navigation">
+                                                    <ul
+                                                        class="pagination pagination-borderless justify-content-center mt-2">
+                                                        <li class="page-item previous"><a class="page-link" href="#"><i
+                                                                    class="bx bx-chevron-left"></i></a></li>
+                                                        <li class="page-item"><a class="page-link" href="#">1</a>
+                                                        </li>
+                                                        <li class="page-item"><a class="page-link" href="#">2</a>
+                                                        </li>
+                                                        <li class="page-item"><a class="page-link" href="#">3</a>
+                                                        </li>
+                                                        <li class="page-item active" aria-current="page"><a
+                                                                class="page-link" href="#">4</a>
+                                                        </li>
+                                                        <li class="page-item"><a class="page-link" href="#">5</a>
+                                                        </li>
+                                                        <li class="page-item"><a class="page-link" href="#">6</a>
+                                                        </li>
+                                                        <li class="page-item"><a class="page-link" href="#">7</a>
+                                                        </li>
+                                                        <li class="page-item next"><a class="page-link" href="#"><i
+                                                                    class="bx bx-chevron-right"></i></a>
+                                                        </li>
+                                                    </ul>
+                                                </nav>
+                                                <div
+                                                    class="w-100 d-flex align-items-center justify-content-center mt-2">
+                                                    <button onClick="history.back();" type="button"
+                                                        class="btn btn-outline-primary ml-1 cancel_btn px-3">
+                                                        <i class="bx bx-check d-block d-sm-none"></i>
+                                                        <span class="d-none d-sm-block">목록</span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane " id="tab3" aria-labelledby="tab3-tab" role="tabpanel">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="table-responsive list_table mt-2">
+                                                    <table class="table mb-0 text-center table-striped"
+                                                        style="border-collapse: unset; border-spacing: unset;">
+                                                        <thead class="thead-dark">
+                                                            <tr>
+                                                                <th>No</th>
+                                                                <th>내용</th>
+                                                                <th>작성일</th>
+                                                                <th>작성자</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody class="font-small-3">
+                                                            <tr>
+                                                                <td>10</td>
+                                                                <td>학생 회원으로 가입 승인 처리 (학교 : OOO대학교)</td>
+                                                                <td>2024-10-30</td>
+                                                                <td>
+                                                                    작성자
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+
+                                                <!-- pagination -->
+                                                <nav aria-label="Page navigation">
+                                                    <ul
+                                                        class="pagination pagination-borderless justify-content-center mt-2">
+                                                        <li class="page-item previous"><a class="page-link" href="#"><i
+                                                                    class="bx bx-chevron-left"></i></a></li>
+                                                        <li class="page-item"><a class="page-link" href="#">1</a>
+                                                        </li>
+                                                        <li class="page-item"><a class="page-link" href="#">2</a>
+                                                        </li>
+                                                        <li class="page-item"><a class="page-link" href="#">3</a>
+                                                        </li>
+                                                        <li class="page-item active" aria-current="page"><a
+                                                                class="page-link" href="#">4</a>
+                                                        </li>
+                                                        <li class="page-item"><a class="page-link" href="#">5</a>
+                                                        </li>
+                                                        <li class="page-item"><a class="page-link" href="#">6</a>
+                                                        </li>
+                                                        <li class="page-item"><a class="page-link" href="#">7</a>
+                                                        </li>
+                                                        <li class="page-item next"><a class="page-link" href="#"><i
+                                                                    class="bx bx-chevron-right"></i></a>
+                                                        </li>
+                                                    </ul>
+                                                </nav>
+                                                <div
+                                                    class="w-100 d-flex align-items-center justify-content-center mt-2">
+                                                    <button onClick="history.back();" type="button"
+                                                        class="btn btn-outline-primary ml-1 cancel_btn px-3">
+                                                        <i class="bx bx-check d-block d-sm-none"></i>
+                                                        <span class="d-none d-sm-block">목록</span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- TAB end -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END: Content-->
+
+
+    <!-- BEGIN: Vendor JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="/app-assets/vendors/js/vendors.min.js"></script>
+    <script src="/app-assets/fonts/LivIconsEvo/js/LivIconsEvo.tools.js"></script>
+    <script src="/app-assets/fonts/LivIconsEvo/js/LivIconsEvo.defaults.js"></script>
+    <script src="/app-assets/fonts/LivIconsEvo/js/LivIconsEvo.min.js"></script>
+    <!-- BEGIN Vendor JS-->
+
+    <!-- BEGIN: Page JS-->
+    <script src="/app-assets/vendors/js/extensions/sweetalert2.all.min.js"></script>
+    <script src="/app-assets/vendors/js/pickers/pickadate/picker.js"></script>
+    <script src="/app-assets/vendors/js/pickers/pickadate/picker.date.js"></script>
+    <script src="/app-assets/vendors/js/pickers/pickadate/picker.time.js"></script>
+    <script src="/app-assets/vendors/js/pickers/pickadate/legacy.js"></script>
+    <script src="/app-assets/vendors/js/pickers/daterange/moment.min.js"></script>
+    <script src="/app-assets/vendors/js/pickers/daterange/daterangepicker.js"></script>
+    <!-- END: Page JS-->
+
+    <!-- BEGIN: Theme JS-->
+    <script src="/app-assets/js/core/app-menu.js"></script>
+    <script src="/app-assets/js/core/app.js"></script>
+    <script src="/app-assets/js/scripts/components.js"></script>
+    <script src="/app-assets/js/scripts/modal/components-modal.js"></script>
+
+    <!-- END: Theme JS-->
+
+</body>
+
+</html>
