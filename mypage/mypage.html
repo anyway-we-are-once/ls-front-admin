@@ -254,7 +254,7 @@
     <!-- END: Main Menu-->
 
     <!-- BEGIN: Content-->
-    <!-- 08.보안관리_로그목록_리스트  -->
+    <!-- 09.마이페이지_최초진입  -->
     <div class="app-content content">
         <div class="content-overlay"></div>
         <div class="content-wrapper">
@@ -264,18 +264,16 @@
                         <div class="col-12">
                             <h3 class="content-header-title pr-1 mb-0 border-right-0">
                                 <strong>
-                                    로그 목록
+                                    마이페이지
                                 </strong>
                             </h3>
                             <div class="breadcrumb-wrapper col-12">
                                 <ol class="breadcrumb p-0 mb-0 justify-content-end">
                                     <li class="breadcrumb-item"><a href="index.html"><i class="bx bx-home-alt"></i></a>
                                     </li>
-                                    <li class="breadcrumb-item"><a href="/security/index.html">보안 관리</a>
+                                    <li class="breadcrumb-item"><a href="/mypage/"> 마이페이지</a>
                                     </li>
-                                    <li class="breadcrumb-item"><a href="/log/index.html">로그 목록</a>
-                                    </li>
-                                    <li class="breadcrumb-item"><a href="/log/index.html">목록</a>
+                                    <li class="breadcrumb-item"><a href="/mypage/">내 정보</a>
                                     </li>
                                 </ol>
                             </div>
@@ -284,147 +282,49 @@
                 </div>
             </div>
             <div class="content-body">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="card background-color card w-100 b-1 mb-0">
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="row pb-2 mb-2 border-bottom">
-                                                    <div class="col-md-12  d-flex align-items-center">
-                                                        <div class="pr-0" style="width:11%">
-                                                            <label class="h6 mb-0">기간
-                                                            </label>
-                                                        </div>
-                                                        <div style="width:89%;">
-                                                            <div class="d-flex align-items-center">
-                                                                <input type="date" class="form-control d-inline-block"
-                                                                    id="date_start" name="date_start" value=""
-                                                                    placeholder="시작일" style="width: 90%;">
-                                                                <input type="date"
-                                                                    class="ml-1 form-control d-inline-block"
-                                                                    id="date_end" name="date_end" value=""
-                                                                    placeholder="종료일" style="width: 90%;">
-                                                            </div>
-                                                        </div>
+                <!-- Section start -->
+                <section id="mypage">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card background-color card w-100 b-1 mb-0">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <h5 class="text-center pt-2 mb-2"><strong>
+                                                    보안을 위해 추가인증을 진행합니다.
+                                                </strong></h5>
+
+                                            <h6 class="text-center">
+                                                마이페이지 접근을 위해<br>
+                                                사용 중인 비밀번호를 입력해 주세요.
+                                            </h6>
+
+
+                                            <div class="card-body">
+                                                <form action="">
+                                                    <div style="margin: 0 auto;"
+                                                        class="form-group mb-50 d-flex justify-content-center align-items-center w-50">
+                                                        <input type="" class="form-control" id="" placeholder="비밀번호 입력">
                                                     </div>
-                                                </div>
-                                                <div class=" row pb-2 mb-2 border-bottom">
-                                                    <div class="col-md-12  d-flex align-items-center">
-                                                        <div class="pr-0" style="width:11%">
-                                                            <label class="h6 mb-0">검색
-                                                            </label>
-                                                        </div>
-                                                        <div style="width:89%;">
-                                                            <div class="d-flex align-items-center">
-                                                                <fieldset class="form-group mb-0 col-md-4 p-0">
-                                                                    <select class="form-control" id="search_category">
-                                                                        <option>1차 분류</option>
-                                                                        <option>1차 분류</option>
-                                                                        <option>1차 분류</option>
-                                                                    </select>
-                                                                </fieldset>
-                                                                <fieldset class="form-group mb-0 col-md-4 p-0 ml-1">
-                                                                    <input type="text" class="form-control"
-                                                                        placeholder="텍스트 영역">
-                                                                </fieldset>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-12 p-0 d-flex justify-content-center">
-                                                    <a href="javascript:void(0);"
-                                                        class="btn btn-dark text-uppercase width-150 search_button">
-                                                        검색
-                                                    </a>
-                                                </div>
+                                                </form>
                                             </div>
+                                        </div>
+
+                                        <div class="w-100 d-flex align-items-center justify-content-center mt-2">
+                                            <a href="/mypage/mypage2.html" type="button"
+                                                class="btn btn-primary ml-1 save_btn px-3">
+                                                <i class="bx bx-check d-block d-sm-none"></i>
+                                                <span class="d-none d-sm-block">확인</span>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                </section>
+                <!-- Section end -->
             </div>
-
-            <!-- Section start -->
-            <section id="mypage">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="card background-color card w-100 b-1 mb-0">
-                            <div class="card-content">
-                                <div class="card-body">
-                                    <div class="table-responsive list_table mt-2">
-                                        <table class="table mb-0 text-center table-striped"
-                                            style="border-collapse: unset; border-spacing: unset;">
-                                            <thead class="thead-dark">
-                                                <tr>
-                                                    <th>
-                                                        구분
-                                                    </th>
-                                                    <th>처리시간</th>
-                                                    <th>사용자</th>
-                                                    <th>수행내역</th>
-                                                    <th>접속IP</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody class="font-small-3">
-                                                <tr>
-                                                    <td>
-                                                        [로그인]
-                                                    </td>
-                                                    <td>
-                                                        2024-07-01 22:44:22
-                                                    </td>
-                                                    <td>
-                                                        박성현
-                                                    </td>
-                                                    <td>
-                                                        로그인
-                                                    </td>
-                                                    <td>
-                                                        127.0.0.0
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-
-                                    <!-- pagination -->
-                                    <nav aria-label="Page navigation">
-                                        <ul class="pagination pagination-borderless justify-content-center mt-2">
-                                            <li class="page-item previous"><a class="page-link" href="#"><i
-                                                        class="bx bx-chevron-left"></i></a></li>
-                                            <li class="page-item"><a class="page-link" href="#">1</a>
-                                            </li>
-                                            <li class="page-item"><a class="page-link" href="#">2</a>
-                                            </li>
-                                            <li class="page-item"><a class="page-link" href="#">3</a>
-                                            </li>
-                                            <li class="page-item active" aria-current="page">
-                                                <a class="page-link" href="#">4
-                                                </a>
-                                            </li>
-                                            <li class="page-item"><a class="page-link" href="#">5</a>
-                                            </li>
-                                            <li class="page-item"><a class="page-link" href="#">6</a>
-                                            </li>
-                                            <li class="page-item"><a class="page-link" href="#">7</a>
-                                            </li>
-                                            <li class="page-item next"><a class="page-link" href="#"><i
-                                                        class="bx bx-chevron-right"></i></a></li>
-                                        </ul>
-                                    </nav>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- Section end -->
         </div>
     </div>
     <!-- END: Content-->
@@ -449,7 +349,6 @@
     <script src="/app-assets/js/scripts/modal/components-modal.js"></script>
 
     <!-- END: Theme JS-->
-
 </body>
 
 </html>
